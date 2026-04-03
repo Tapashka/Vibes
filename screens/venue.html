@@ -1,0 +1,262 @@
+<div class="screen" id="venue-screen">
+  <div class="venue-hero">
+    <div class="venue-hero-bg" id="vh-bg">🍽</div>
+    <div class="venue-hero-overlay"></div>
+    <div class="venue-hero-back" onclick="showScreen('map-screen')">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <div class="venue-hero-actions">
+      <div class="vh-btn" id="share-btn" onclick="shareVenue()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </div>
+      <div class="vh-btn" id="fav-btn-v" onclick="toggleFavVenue()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" id="fav-icon-v"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="venue-body" id="venue-body">
+    <div class="venue-top">
+      <div><div class="venue-name" id="vn">Cafe Gusto</div><div class="venue-addr" id="va">Abashidze str. 24</div></div>
+      <div style="text-align:right;flex-shrink:0;margin-left:8px;">
+        <div style="background:#E8F4FF;border-radius:20px;padding:4px 10px;display:inline-flex;align-items:center;gap:3px;">
+          <span style="color:#F5C518;font-size:13px;">★</span>
+          <span style="font-size:13px;font-weight:700;color:#1877F2;" id="vrating">4.6</span>
+        </div>
+      </div>
+    </div>
+    <div class="venue-row"><span class="vrl">Rating</span><div class="vstars" id="vstars"></div></div>
+    <div class="venue-row"><span class="vrl">Hours</span><span class="vhours" id="vhours">11:00–23:00</span></div>
+    <div class="venue-row">
+      <span class="vrl">Contacts</span>
+      <div class="cicons">
+        <div class="cicon" style="background:#25D366"><svg fill="#fff" viewBox="0 0 24 24" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></div>
+        <div class="cicon" style="background:#0088cc"><svg fill="#fff" viewBox="0 0 24 24" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg></div>
+        <div class="cicon" style="background:#7360F2"><svg fill="#fff" viewBox="0 0 24 24" width="18" height="18"><path d="M11.4 0C5.1.3.3 5.4 0 11.7c-.1 3.3.9 6.3 2.7 8.7l-1.8 5.3 5.5-1.7c2.2 1.4 4.8 2.2 7.6 2.2 6.4 0 11.6-5.2 12-11.6.3-6.7-5.1-12.4-11.8-14l-.8.4z"/></svg></div>
+        <div class="cicon" style="background:#34A853"><svg fill="#fff" viewBox="0 0 24 24" width="18" height="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+      </div>
+    </div>
+    <div class="venue-row">
+      <span class="vrl">Media</span>
+      <div class="micons">
+        <div class="micon">🌐</div>
+        <div class="micon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;"><svg fill="#fff" viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 10.838c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0-2.163c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
+      </div>
+    </div>
+    <div class="venue-btns">
+      <button class="vbtn bblue" id="btn-find-way">Find the way</button>
+      <button class="vbtn byellow" onclick="openDelivery()">Delivery</button>
+      <button class="vbtn bgreen" onclick="openBooking()">Book table</button>
+    </div>
+    <div class="vtabs">
+      <div class="vtab active" onclick="switchVTab(this,'vt-afisha')">Afisha</div>
+      <div class="vtab" onclick="switchVTab(this,'vt-menu')">Menu</div>
+      <div class="vtab" onclick="switchVTab(this,'vt-features')">Features</div>
+      <div class="vtab" onclick="switchVTab(this,'vt-about')">About</div>
+    </div>
+    <div class="vtab-content">
+      <div class="vtab-panel active" id="vt-afisha">
+        <div class="evcard today">
+          <div class="evthumb" style="background:linear-gradient(135deg,#b8a080,#8a6a40)">🍷</div>
+          <div class="evright">
+            <div><span class="evday">Today</span><span class="evdstr">26.03.2026</span></div>
+            <div class="evtime">17:00 – 22:00</div>
+            <div class="evdesc">Wine tasting of the Alazani valley, sommeliers & FunkyJazz live music.</div>
+            <div class="evbtns"><button class="ebdark">I will come</button><button class="ebgreen">Find the way</button></div>
+          </div>
+        </div>
+        <div class="evcard other">
+          <div class="evthumb" style="background:#e8e8e8">🎷</div>
+          <div class="evright">
+            <div><span class="evday">Thursday</span><span class="evdstr">27.03.2026</span></div>
+            <div class="evtime">17:00 – 22:00</div>
+            <div class="evdesc">Wine tasting of the Alazani valley, sommeliers & FunkyJazz live music.</div>
+            <div class="evbtns"><button class="ebdark">I will come</button><button class="ebgreen">Find the way</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="vtab-panel" id="vt-menu">
+        <div class="menu-item"><div class="menu-img" style="background:linear-gradient(135deg,#4caf50,#8bc34a)">🥗</div><div class="menu-info"><h4>Caesar Salad</h4><p>Romaine, parmesan, croutons, dressing</p><div class="menu-price">€12</div></div></div>
+        <div class="menu-item"><div class="menu-img" style="background:linear-gradient(135deg,#e91e63,#ff5722)">🥩</div><div class="menu-info"><h4>Grilled Ribeye 300g</h4><p>Chimichurri, seasonal vegetables</p><div class="menu-price">€34</div></div></div>
+        <div class="menu-item"><div class="menu-img" style="background:linear-gradient(135deg,#9c27b0,#673ab7)">🍷</div><div class="menu-info"><h4>Wine Tasting Set</h4><p>3 glasses of selected Georgian wines</p><div class="menu-price">€28</div></div></div>
+        <div class="menu-item"><div class="menu-img" style="background:linear-gradient(135deg,#ff9800,#ffc107)">🍰</div><div class="menu-info"><h4>Tiramisu</h4><p>Savoiardi, mascarpone, espresso</p><div class="menu-price">€9</div></div></div>
+      </div>
+      <div class="vtab-panel" id="vt-features">
+        <div class="features-grid">
+          <span class="feat">🅿️ Parking</span><span class="feat">🌅 City view</span>
+          <span class="feat">🎵 Live music</span><span class="feat">🎂 Birthdays</span>
+          <span class="feat">🛋 VIP rooms</span><span class="feat">☕ Brunch</span>
+          <span class="feat">💨 Hookah</span><span class="feat">🐾 Pet-friendly</span>
+          <span class="feat">♿ Accessible</span><span class="feat">📶 Free WiFi</span>
+          <span class="feat">💳 Card pay</span><span class="feat">🚬 Smoking</span>
+        </div>
+        <div style="margin-top:12px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;">Cuisine</div>
+        <div class="features-grid"><span class="feat">🇮🇹 Italian</span><span class="feat">🇬🇪 Georgian</span><span class="feat">🍽 European</span></div>
+      </div>
+      <div class="vtab-panel" id="vt-about">
+        <p style="font-size:14px;line-height:1.7;color:#555;">Cafe Gusto blends Italian tradition with Georgian flavors. Our terrace offers stunning city views with warm lighting and intimate atmosphere perfect for any occasion.</p>
+        <div class="rev-card" style="margin-top:12px;">
+          <div class="rev-top"><div class="rev-av" style="background:#E91E63">S</div><div><div class="rev-name">Sofia K.</div><div class="rev-dt">2 days ago</div></div></div>
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">Wonderful atmosphere and exquisite wines. The sommeliers were brilliant!</p>
+        </div>
+        <div class="rev-card">
+          <div class="rev-top"><div class="rev-av" style="background:#2196F3">M</div><div><div class="rev-name">Marco V.</div><div class="rev-dt">1 week ago</div></div></div>
+          <div class="rev-stars">★★★★☆</div>
+          <p class="rev-txt">Great food and service. Pricey but worth it for a special occasion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<
+
+<div class="screen sub-screen" id="booking-screen">
+  <div class="sb dark" style="background:transparent;position:relative;z-index:2;"><span class="time" style="color:#fff">9:30</span></div>
+  <div class="booking-header">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;" onclick="showScreen('venue-screen')">
+        <svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5" width="18" height="18"><path d="m15 18-6-6 6-6"/></svg>
+      </div>
+      <div>
+        <h2 id="booking-venue-name">Cafe Gusto</h2>
+        <p>Choose your table</p>
+      </div>
+    </div>
+  </div>
+  <div class="booking-card">
+    <!-- Floor selector -->
+    <div class="floor-tabs">
+      <button class="floor-tab active" onclick="selectFloor(this,1)">Floor 1</button>
+      <button class="floor-tab" onclick="selectFloor(this,2)">Floor 2</button>
+      <button class="floor-tab" onclick="selectFloor(this,3)">Terrace</button>
+    </div>
+    <!-- Legend -->
+    <div class="floor-legend">
+      <span class="legend-lbl"><span class="legend-dot" style="background:#E8FDF0;border:1.5px solid #2ECC40;"></span>Free</span>
+      <span class="legend-lbl"><span class="legend-dot" style="background:#FFE8E8;border:1.5px solid #E53935;"></span>Taken</span>
+      <span class="legend-lbl"><span class="legend-dot" style="background:linear-gradient(135deg,#0EC6B8,#1877F2);"></span>Selected</span>
+    </div>
+    <!-- Table map -->
+    <div class="table-map-wrap">
+      <div class="table-map" id="table-map"></div>
+    </div>
+    <!-- Footer -->
+    <div class="booking-footer">
+      <div class="booking-guests">
+        <label>Guests:</label>
+        <div class="guests-ctrl">
+          <button class="g-btn" onclick="changeGuests(-1)">−</button>
+          <span class="g-count" id="g-count">2</span>
+          <button class="g-btn" onclick="changeGuests(1)">+</button>
+        </div>
+        <label style="margin-left:12px;">Date:</label>
+        <input type="date" id="booking-date" style="background:#f4f4f4;border:none;border-radius:8px;padding:5px 8px;font-size:12px;font-family:'Inter',sans-serif;color:#111;outline:none;flex:1;">
+      </div>
+      <div class="booking-summary">
+        <div class="booking-sel">Table: <span id="sel-table-label">not selected</span></div>
+        <div class="booking-sel" style="margin-left:16px;">Guests: <span id="sel-guests">2</span></div>
+      </div>
+      <button class="booking-confirm" id="booking-confirm-btn" onclick="confirmBooking()">Reserve Table</button>
+    </div>
+  </div>
+<
+
+<div class="screen" id="filter-screen">
+  <div class="sb dark" style="background:transparent;"><span class="time" style="color:#fff">9:30</span></div>
+  <div class="filter-header">
+    <div class="filter-back" onclick="goBack()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="filter-title">Search</span>
+  </div>
+
+  <!-- Name search bar -->
+  <div class="filter-search-row">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input class="filter-search-inp" type="text" id="filter-name-inp" placeholder="Search by name..." oninput="filterByName(this.value)">
+  </div>
+
+  <div class="filter-body">
+
+    <!-- City row -->
+    <div class="filter-row">
+      <span class="filter-label">City</span>
+      <input class="city-input" type="text" placeholder="Tbilisi" value="Tbilisi">
+    </div>
+
+    <!-- Time row: Now active by default, Add date and time toggles pickers -->
+    <div class="filter-row" style="gap:8px;align-items:center;">
+      <button class="now-btn now-active" id="now-btn" onclick="toggleNow(true)">Now</button>
+      <button class="add-dt-btn" id="add-dt-btn" onclick="toggleNow(false)">+ Add date &amp; time</button>
+    </div>
+    <div id="date-picks-row" style="display:none;margin-bottom:6px;">
+      <div class="date-picks">
+        <select class="dpick"><option>22</option><option>23</option><option>24</option><option>25</option><option selected>26</option><option>27</option><option>28</option></select>
+        <select class="dpick"><option>Jan</option><option>Feb</option><option selected>Mar</option><option>Apr</option><option>May</option></select>
+        <select class="dpick"><option>1</option><option>2</option><option selected>3</option><option>4</option></select>
+        <select class="dpick"><option>15.00</option><option>16.00</option><option selected>17.00</option><option>18.00</option><option>19.00</option><option>20.00</option></select>
+      </div>
+    </div>
+
+    <!-- Establishment type — icon grid -->
+    <div class="fsec">Establishment type</div>
+    <div class="icon-chips">
+      <div class="icon-chip chip-on" onclick="toggleIconChip(this)"><span class="ic-emoji">🍽</span><span class="ic-lbl">Restaurant</span></div>
+      <div class="icon-chip" onclick="toggleIconChip(this)"><span class="ic-emoji">🎵</span><span class="ic-lbl">Club</span></div>
+      <div class="icon-chip" onclick="toggleIconChip(this)"><span class="ic-emoji">🎤</span><span class="ic-lbl">Concert</span></div>
+      <div class="icon-chip" onclick="toggleIconChip(this)"><span class="ic-emoji">🍸</span><span class="ic-lbl">Bar</span></div>
+      <div class="icon-chip" onclick="toggleIconChip(this)"><span class="ic-emoji">🏨</span><span class="ic-lbl">Hotel</span></div>
+      <div class="icon-chip chip-on" onclick="toggleIconChip(this)"><span class="ic-emoji">🖼</span><span class="ic-lbl">Museum</span></div>
+    </div>
+
+    <!-- Categories — horizontal scroll pills -->
+    <div class="fsec">Categories</div>
+    <div class="hscroll-chips">
+      <button class="hchip chip-on" onclick="toggleHChip(this)">☕ Cafe</button>
+      <button class="hchip" onclick="toggleHChip(this)">🍺 Beer</button>
+      <button class="hchip" onclick="toggleHChip(this)">🍕 Pizza</button>
+      <button class="hchip" onclick="toggleHChip(this)">🥩 Steak</button>
+      <button class="hchip chip-on" onclick="toggleHChip(this)">🍣 Sushi</button>
+      <button class="hchip" onclick="toggleHChip(this)">🍜 Ramen</button>
+    </div>
+
+    <!-- Kitchen — horizontal scroll pills -->
+    <div class="fsec">Kitchen</div>
+    <div class="hscroll-chips">
+      <button class="hchip chip-on" onclick="toggleHChip(this)">🇬🇪 Georgian</button>
+      <button class="hchip" onclick="toggleHChip(this)">🌏 Asian</button>
+      <button class="hchip" onclick="toggleHChip(this)">👨‍🍳 Author's</button>
+      <button class="hchip" onclick="toggleHChip(this)">🇺🇿 Uzbek</button>
+      <button class="hchip" onclick="toggleHChip(this)">🇨🇳 Chinese</button>
+      <button class="hchip" onclick="toggleHChip(this)">🇷🇺 Russian</button>
+      <button class="hchip" onclick="toggleHChip(this)">🇮🇹 Italian</button>
+    </div>
+
+    <!-- Features — 2-col toggle list -->
+    <div class="fsec">Features</div>
+    <div class="feat-toggles">
+      <div class="feat-toggle chip-on" onclick="toggleFeatToggle(this)"><span>🅿️ Parking</span><span class="ft-chk">✓</span></div>
+      <div class="feat-toggle" onclick="toggleFeatToggle(this)"><span>📶 WiFi</span><span class="ft-chk">✓</span></div>
+      <div class="feat-toggle chip-on" onclick="toggleFeatToggle(this)"><span>🎵 Live music</span><span class="ft-chk">✓</span></div>
+      <div class="feat-toggle" onclick="toggleFeatToggle(this)"><span>💨 Hookah</span><span class="ft-chk">✓</span></div>
+      <div class="feat-toggle" onclick="toggleFeatToggle(this)"><span>🛋 VIP room</span><span class="ft-chk">✓</span></div>
+      <div class="feat-toggle chip-on" onclick="toggleFeatToggle(this)"><span>🌿 Terrace</span><span class="ft-chk">✓</span></div>
+    </div>
+
+    <!-- Rating -->
+    <div class="fsec amber">Rating &amp; Distance</div>
+    <div style="display:flex;gap:6px;align-items:center;margin-bottom:8px;">
+      <button class="rchip chip-on" onclick="selectRating(this)">★</button>
+      <button class="rchip chip-on" onclick="selectRating(this)">★★</button>
+      <button class="rchip" onclick="selectRating(this)">★★★</button>
+      <button class="rchip" onclick="selectRating(this)">★★★★</button>
+      <button class="rchip" onclick="selectRating(this)">★★★★★</button>
+    </div>
+    <div class="dist-wrap">
+      <input type="range" class="dist-slider" min="5" max="50" value="10" step="1" id="dist-slider" oninput="updateDist(this.value)">
+      <div class="dist-marks"><span>5km</span><span id="dist-val" style="font-weight:700;color:#fff;">10km</span><span>20km</span><span>50km</span></div>
+    </div>
+
+  </div>
+  <div class="filter-footer">
+    <button class="ftr-clear" onclick="clearFilters()">Clean all</button>
+    <button class="ftr-search" onclick="applyFilters()">Search</button>
+  </div>
+<

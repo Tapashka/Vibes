@@ -1,0 +1,1232 @@
+<div class="screen" id="profile-screen" style="padding-bottom:80px;">
+  <div 
+  <div class="prof-hero">
+    <div class="prof-hero-top">
+      <div class="prof-av">A</div>
+      <div style="flex:1;">
+        <div class="prof-name">Alex Petrov</div>
+        <div class="prof-sub">Amsterdam · Member since 2024</div>
+        
+      </div>
+    </div>
+    <div class="prof-stats">
+      <div class="pstat"><div class="n">3</div><div class="l">Saved</div></div>
+      <div class="pstat"><div class="n">12</div><div class="l">Reviews</div></div>
+      <div class="pstat"><div class="n">28</div><div class="l">Check-ins</div></div>
+    </div>
+  </div>
+  <div class="prof-rows">
+        <!-- Business Account Entry -->
+    <div onclick="showScreen('biz-login-screen')" style="background:linear-gradient(135deg,#0EC6B8,#1877F2);border-radius:16px;padding:14px 16px;margin:0 0 10px;cursor:pointer;display:flex;align-items:center;gap:12px;">
+      <div style="width:40px;height:40px;background:rgba(255,255,255,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:700;color:#fff;">Business Cabinet</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.75);margin-top:2px;">Sign in to manage your venues</div>
+      </div>
+      <svg fill="none" stroke="rgba(255,255,255,.8)" viewBox="0 0 24 24" stroke-width="2.5" width="16" height="16"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+<div class="psec">Account</div>
+    <div class="prow" onclick="showScreen('profile-edit-screen')">
+      <div class="prow-ic" style="background:#EEF3FF"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="prow-txt"><h4>Edit Profile</h4><p>Name, photo, preferences</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="prow" onclick="showScreen('favorites-screen')">
+      <div class="prow-ic" style="background:#FCE4EC"><svg fill="none" stroke="#E91E63" viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div class="prow-txt"><h4>Saved Places</h4><p>3 places</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="psec">Activity</div>
+    <div class="prow" onclick="showScreen('profile-reservations-screen')">
+      <div class="prow-ic" style="background:#E8F4FF"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+      <div class="prow-txt"><h4>My Reservations</h4><p>2 tables · 1 ticket</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="prow" onclick="showScreen('profile-reviews-screen')">
+      <div class="prow-ic" style="background:#E8F5E9"><svg fill="none" stroke="#2ECC40" viewBox="0 0 24 24" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+      <div class="prow-txt"><h4>My Reviews</h4><p>12 reviews written</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="prow" onclick="showScreen('profile-events-screen')">
+      <div class="prow-ic" style="background:#FFF8E1"><svg fill="none" stroke="#F5C518" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="prow-txt"><h4>Events Attending</h4><p>2 upcoming events</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="psec">Settings</div>
+    <div class="prow" onclick="showScreen('profile-notifications-screen')">
+      <div class="prow-ic" style="background:#F3E5F5"><svg fill="none" stroke="#9C27B0" viewBox="0 0 24 24" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+      <div class="prow-txt"><h4>Notifications</h4><p>Events, deals nearby</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="prow" onclick="showScreen('profile-privacy-screen')">
+      <div class="prow-ic" style="background:#E3F2FD"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="prow-txt"><h4>Privacy & Security</h4><p>Data, permissions</p></div>
+      <svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PROFILE: EDIT ───────────────────────────────────── -->
+<div class="screen sub-screen" id="profile-edit-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Edit Profile</span></div>
+  <div class="sub-body" style="overflow-y:auto;">
+    <div style="text-align:center;margin-bottom:18px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#0EC6B8,#1877F2);display:inline-flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;position:relative;">A
+        <div style="position:absolute;bottom:0;right:0;width:22px;height:22px;background:#1877F2;border-radius:50%;border:2px solid #f8f8f8;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          <svg fill="#fff" viewBox="0 0 24 24" width="10" height="10"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm17.71-10.21a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#888;margin-top:6px;">Tap to change photo</p>
+    </div>
+    <div class="form-row"><div class="form-label">Full Name</div><input class="form-input" type="text" value="Alex Petrov"></div>
+    <div class="form-row"><div class="form-label">Email</div><input class="form-input" type="email" value="alex@vibes.city"></div>
+    <div class="form-row"><div class="form-label">City</div><input class="form-input" type="text" value="Amsterdam"></div>
+    <div class="form-row"><div class="form-label">Bio</div><textarea class="form-input" rows="2" style="resize:none;">City explorer & food enthusiast 🌆</textarea></div>
+    <button class="save-btn" onclick="showToast('Profile saved! ✓');showScreen('profile-screen')">Save Changes</button>
+  </div>
+</div>
+
+
+<!-- ─── PROFILE: MY RESERVATIONS ─────────────────────────── -->
+<div class="screen sub-screen" id="profile-reservations-screen"
+  style="background:linear-gradient(160deg,#0EC6B8 0%,#1877F2 55%,#1035C8 100%);padding-bottom:80px;">
+  <div class="sb dark" style="background:transparent;"><span class="time" style="color:#fff">9:30</span></div>
+  <div class="sub-header" style="background:transparent;border:none;">
+    <div class="sub-back" style="background:rgba(255,255,255,.2);" onclick="showScreen('profile-screen')">
+      <svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <span class="sub-title" style="color:#fff;">My Reservations</span>
+  </div>
+
+  <!-- Table Reservations -->
+  <div class="res-section">🪑 Table Bookings</div>
+  <div class="res-list">
+
+    <!-- Reservation 1 — Confirmed -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#0EC6B8,#1877F2)">🍸</div>
+        <div class="res-card-title">
+          <h4>Skybar Rooftop</h4>
+          <p>Table T3 · Rooftop Floor</p>
+        </div>
+        <span class="res-status confirmed">Confirmed</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">26 Mar 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">20:00</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">2 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Window seat</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Skybar')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Reservation 2 — Confirmed -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#b8a080,#8a6a40)">🍽</div>
+        <div class="res-card-title">
+          <h4>Cafe Gusto</h4>
+          <p>Table T7 · Main Hall</p>
+        </div>
+        <span class="res-status confirmed">Confirmed</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">29 Mar 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">19:30</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">4 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Centre hall</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Cafe Gusto')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Reservation 3 — Pending -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#00BCD4,#4CAF50)">🍣</div>
+        <div class="res-card-title">
+          <h4>Zen Sushi</h4>
+          <p>Table TR2 · Terrace</p>
+        </div>
+        <span class="res-status pending">Pending</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">2 Apr 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">13:00</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">3 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Terrace</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Zen Sushi')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Tickets section header -->
+    <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.65);text-transform:uppercase;
+      letter-spacing:1px;padding:8px 0 8px;">🎟 Event Tickets</div>
+
+    <!-- Ticket 1 -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div class="ticket-emoji">🎷</div>
+        <div class="ticket-info">
+          <h4>Sunset Jazz Night</h4>
+          <p>Skybar Rooftop · Live performance</p>
+        </div>
+        <span class="res-status confirmed">Active</span>
+      </div>
+      <div class="ticket-mid">
+        <div class="res-detail"><span class="lbl">Date</span><span class="val">26 Mar 2026</span></div>
+        <div class="res-detail"><span class="lbl">Time</span><span class="val">20:00</span></div>
+        <div class="res-detail"><span class="lbl">Seat</span><span class="val">Standing</span></div>
+      </div>
+      <div class="ticket-bottom">
+        <span class="ticket-price">Free entry</span>
+        <div class="ticket-qr" onclick="showToast('QR code shown')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticket 2 -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div class="ticket-emoji">🎧</div>
+        <div class="ticket-info">
+          <h4>Neon Rave: Techno Night</h4>
+          <p>Neon Club · DJ KRAS b2b ZOLA</p>
+        </div>
+        <span class="res-status pending">Pending</span>
+      </div>
+      <div class="ticket-mid">
+        <div class="res-detail"><span class="lbl">Date</span><span class="val">27 Mar 2026</span></div>
+        <div class="res-detail"><span class="lbl">Time</span><span class="val">23:00</span></div>
+        <div class="res-detail"><span class="lbl">Seat</span><span class="val">General</span></div>
+      </div>
+      <div class="ticket-bottom">
+        <span class="ticket-price">€20.00</span>
+        <div class="ticket-qr" onclick="showToast('QR code shown')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- res-list -->
+</div>
+
+<!-- ─── PROFILE: MY REVIEWS ─────────────────────────────── -->
+<div class="screen sub-screen" id="profile-reviews-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">My Reviews</span></div>
+  <div class="sub-body" style="overflow-y:auto;">
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍸 Skybar</span><span class="sr-stars">★★★★★</span></div><p class="sr-txt">Incredible rooftop views and amazing cocktails. The jazz night was unforgettable!</p><p style="font-size:11px;color:#aaa;margin-top:5px;">2 days ago</p></div>
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍽 Cafe Gusto</span><span class="sr-stars">★★★★☆</span></div><p class="sr-txt">Excellent food and service. The wine tasting was a highlight of our trip to Tbilisi.</p><p style="font-size:11px;color:#aaa;margin-top:5px;">1 week ago</p></div>
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍣 Zen Sushi</span><span class="sr-stars">★★★★★</span></div><p class="sr-txt">Best sushi in the city. Fresh, creative, and perfectly presented. Will return!</p><p style="font-size:11px;color:#aaa;margin-top:5px;">2 weeks ago</p></div>
+    <button class="save-btn" style="background:var(--blue);" onclick="openVenue('Cafe Gusto','Italian Restaurant')">+ Write New Review</button>
+  </div>
+</div>
+
+<!-- ─── PROFILE: EVENTS ATTENDING ───────────────────────── -->
+<div class="screen sub-screen" id="profile-events-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Events Attending</span></div>
+  <div class="sub-body">
+    <div class="ev-row-sm" onclick="openVenue('Skybar','Rooftop Bar')">
+      <div class="ev-date-sm"><span class="d">26</span><span class="m">MAR</span></div>
+      <div class="ev-info-sm"><h4>Sunset Jazz Night</h4><p>Skybar Rooftop · 20:00</p></div>
+      <span style="background:#E8FFE8;color:#00803A;padding:4px 10px;border-radius:10px;font-size:11px;font-weight:700;">LIVE</span>
+    </div>
+    <div class="ev-row-sm" onclick="openVenue('Neon Club','Nightclub')">
+      <div class="ev-date-sm" style="background:#9C27B0;"><span class="d">27</span><span class="m">MAR</span></div>
+      <div class="ev-info-sm"><h4>Neon Rave: Techno</h4><p>Neon Club · 23:00</p></div>
+      <span style="background:#F3E5F5;color:#9C27B0;padding:4px 10px;border-radius:10px;font-size:11px;font-weight:700;">Tomorrow</span>
+    </div>
+    <div style="margin-top:16px;padding:14px;background:#EEF3FF;border-radius:14px;text-align:center;">
+      <p style="font-size:14px;font-weight:600;color:#1877F2;">Looking for more events?</p>
+      <button onclick="showScreen('events-screen')" style="margin-top:10px;background:#1877F2;color:#fff;border:none;border-radius:18px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;">Browse Events</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PROFILE: NOTIFICATIONS ──────────────────────────── -->
+<div class="screen sub-screen" id="profile-notifications-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Notifications</span></div>
+  <div class="sub-body">
+    <div class="notif-row"><div class="notif-label"><h4>Events Near Me</h4><p>Live events happening nearby</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>New Places</h4><p>When new venues open</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Deals & Offers</h4><p>Special offers from saved places</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Review Likes</h4><p>When someone likes your review</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Booking Reminders</h4><p>2 hours before reservation</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <button class="save-btn" onclick="showToast('Notification settings saved ✓');showScreen('profile-screen')">Save Settings</button>
+  </div>
+</div>
+
+<!-- ─── PROFILE: PRIVACY ─────────────────────────────────── -->
+<div class="screen sub-screen" id="profile-privacy-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Privacy & Security</span></div>
+  <div class="sub-body">
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/></svg></div><div class="privacy-txt"><h4>Profile Visibility</h4><p>Public · Anyone can see your profile</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></div><div class="privacy-txt"><h4>Location Sharing</h4><p>Share location with app</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="privacy-txt"><h4>Two-Factor Auth</h4><p>Extra security for your account</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row" style="cursor:pointer;" onclick="showToast('Password reset email sent ✓')"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 2H3v16h5l3 3 3-3h7V2z"/><path d="M11 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM8 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM14 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/></svg></div><div class="privacy-txt"><h4>Change Password</h4><p>Send reset link to email</p></div><svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></div>
+    <button class="save-btn" onclick="showToast('Privacy settings saved ✓');showScreen('profile-screen')">Save Settings</button>
+  </div>
+</div>
+
+
+<!-- ─── BOOKING / TABLE MAP SCREEN ───────────────────────── -->
+<div class="screen sub-screen" id="booking-screen">
+  <div class="sb dark" style="background:transparent;position:relative;z-index:2;"><span class="time" style="color:#fff">9:30</span></div>
+  <div class="booking-header">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;" onclick="showScreen('venue-screen')">
+        <svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5" width="18" height="18"><path d="m15 18-6-6 6-6"/></svg>
+      </div>
+      <div>
+        <h2 id="booking-venue-name">Cafe Gusto</h2>
+        <p>Choose your table</p>
+      </div>
+    </div>
+  </div>
+  <div class="booking-card">
+    <!-- Floor selector -->
+    <div class="floor-tabs">
+      <button class="floor-tab active" onclick="selectFloor(this,1)">Floor 1</button>
+      <button class="floor-tab" onclick="selectFloor(this,2)">Floor 2</button>
+      <button class="floor-tab" onclick="selectFloor(this,3)">Terrace</button>
+    </div>
+    <!-- Legend -->
+    <div class="floor-legend">
+      <span class="legend-lbl"><span class="legend-dot" style="background:#E8FDF0;border:1.5px solid #2ECC40;"></span>Free</span>
+      <span class="legend-lbl"><span class="legend-dot" style="background:#FFE8E8;border:1.5px solid #E53935;"></span>Taken</span>
+      <span class="legend-lbl"><span class="legend-dot" style="background:linear-gradient(135deg,#0EC6B8,#1877F2);"></span>Selected</span>
+    </div>
+    <!-- Table map -->
+    <div class="table-map-wrap">
+      <div class="table-map" id="table-map"></div>
+    </div>
+    <!-- Footer -->
+    <div class="booking-footer">
+      <div class="booking-guests">
+        <label>Guests:</label>
+        <div class="guests-ctrl">
+          <button class="g-btn" onclick="changeGuests(-1)">−</button>
+          <span class="g-count" id="g-count">2</span>
+          <button class="g-btn" onclick="changeGuests(1)">+</button>
+        </div>
+        <label style="margin-left:12px;">Date:</label>
+        <input type="date" id="booking-date" style="background:#f4f4f4;border:none;border-radius:8px;padding:5px 8px;font-size:12px;font-family:'Inter',sans-serif;color:#111;outline:none;flex:1;">
+      </div>
+      <div class="booking-summary">
+        <div class="booking-sel">Table: <span id="sel-table-label">not selected</span></div>
+        <div class="booking-sel" style="margin-left:16px;">Guests: <span id="sel-guests">2</span></div>
+      </div>
+      <button class="booking-confirm" id="booking-confirm-btn" onclick="confirmBooking()">Reserve Table</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DELIVERY BOTTOM SHEET ───────────────────────────── -->
+<div class="delivery-overlay" id="delivery-overlay" onclick="if(event.target===this)closeDelivery()">
+  <div class="delivery-sheet">
+    <div class="del-handle">🛵 Choose Delivery</div>
+    <div class="del-options">
+      <div class="del-option">
+        <div class="del-logo" style="background:#FC3F1D;">🟠</div>
+        <div class="del-info" style="flex:1;"><h4>Yandex Food</h4><p>Delivery in 25–35 min</p></div>
+        <button class="del-btn" style="background:#FC3F1D;" onclick="closeDelivery();showToast('Opening Yandex Food...')">Order</button>
+      </div>
+      <div class="del-option">
+        <div class="del-logo" style="background:#FF6B1A;">🟡</div>
+        <div class="del-info" style="flex:1;"><h4>Glovo</h4><p>Delivery in 30–45 min</p></div>
+        <button class="del-btn" style="background:#FF6B1A;" onclick="closeDelivery();showToast('Opening Glovo...')">Order</button>
+      </div>
+      <div class="del-option">
+        <div class="del-logo" style="background:#01B4FE;">🔵</div>
+        <div class="del-info" style="flex:1;"><h4>Wolt</h4><p>Delivery in 20–30 min</p></div>
+        <button class="del-btn" style="background:#01B4FE;" onclick="closeDelivery();showToast('Opening Wolt...')">Order</button>
+      </div>
+    </div>
+    <div class="del-close"><button onclick="closeDelivery()">Cancel</button></div>
+  </div>
+</div>
+
+<!-- ─── AI MODAL (global) ───────────────────────────────── -->
+<div class="ai-overlay" id="ai-overlay" onclick="if(event.target===this)closeAI()">
+  <div class="ai-sheet">
+    <div class="ai-sheet-hdr">
+      <div class="ai-logo-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="ai-title-txt"><h4>Vibes AI</h4><p>Find your perfect spot</p></div>
+      <div class="ai-close-btn" onclick="closeAI()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+    </div>
+    <div class="ai-sugs">
+      <button class="ai-sug" onclick="sendAI(this.textContent)">🍷 Wine bar tonight</button>
+      <button class="ai-sug" onclick="sendAI(this.textContent)">🎵 Live music now</button>
+      <button class="ai-sug" onclick="sendAI(this.textContent)">🍣 Best sushi</button>
+      <button class="ai-sug" onclick="sendAI(this.textContent)">🎂 Birthday dinner</button>
+    </div>
+    <div class="ai-msgs" id="ai-msgs">
+      <div class="ai-msg bot"><div class="bub">Hey! 👋 I'm Vibes AI. Tell me what you're looking for — mood, cuisine, occasion — and I'll find the perfect spot for you!</div></div>
+    </div>
+    <div class="ai-inp-row">
+      <input class="ai-inp" id="ai-inp" placeholder="What's your vibe tonight?" onkeydown="if(event.key==='Enter')sendAI(this.value)">
+      <button class="ai-send-btn" onclick="sendAI(document.getElementById('ai-inp').value)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="login-screen" style="background:linear-gradient(160deg,#0EC6B8,#1877F2 55%,#1035C8);justify-content:flex-end;">
+  <div class="biz-login-card">
+    <div class="biz-login-logo"><h1>Vibes</h1><p>Choose how to continue</p></div>
+    <div class="role-cards">
+      <div class="role-card sel" id="rc-guest" onclick="selectRole('guest')">
+        <div class="rc-icon">👤</div>
+        <div class="rc-title">Guest</div>
+        <div class="rc-sub">Browse freely</div>
+      </div>
+      <div class="role-card" id="rc-client" onclick="selectRole('client')">
+        <div class="rc-icon">🏢</div>
+        <div class="rc-title">Business</div>
+        <div class="rc-sub">Manage venue</div>
+      </div>
+    </div>
+    <button onclick="doGuestLogin()" id="login-main-btn" style="width:100%;background:linear-gradient(135deg,#0EC6B8,#1877F2);color:#fff;border:none;border-radius:14px;padding:15px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;">Enter as Guest</button>
+    <div class="biz-switch" style="margin-top:14px;">Business account? <span onclick="showScreen('biz-login-screen')">Sign In</span></div>
+  </div>
+</div>
+
+<!-- ─── BUSINESS LOGIN ─────────────────────────────────── -->
+<div class="screen" id="biz-login-screen" style="background:linear-gradient(160deg,#0EC6B8,#1877F2 55%,#1035C8);justify-content:flex-end;">
+  <div class="biz-login-card">
+    <div class="biz-login-logo"><h1>Business</h1><p>Sign in to manage your venues</p></div>
+    <div class="biz-tab-row">
+      <div class="biz-tab active" id="btab-login" onclick="bizTab('login')">Sign In</div>
+      <div class="biz-tab" id="btab-register" onclick="bizTab('register')">Register</div>
+    </div>
+    <!-- LOGIN FIELDS -->
+    <div id="biz-login-fields">
+      <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" id="bl-email" placeholder="your@email.com"></div>
+      <div class="f-group"><div class="f-label">Password</div><input class="f-input" type="password" id="bl-pass" placeholder="Password"></div>
+      <button class="btn-grad" onclick="doBizLogin()">Sign In</button>
+      <div class="biz-magic-row"><span>or</span></div>
+      <button class="biz-magic-btn" onclick="doMagicLink()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        Send Magic Link
+      </button>
+    </div>
+    <!-- REGISTER FIELDS -->
+    <div id="biz-register-fields" style="display:none;">
+      <div class="f-row2">
+        <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" placeholder="Name"></div>
+        <div class="f-group"><div class="f-label">Surname</div><input class="f-input" type="text" placeholder="Surname"></div>
+      </div>
+      <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" placeholder="your@email.com"></div>
+      <div class="f-group"><div class="f-label">Phone (optional)</div><input class="f-input" type="tel" placeholder="+995 ..."></div>
+      <div class="f-group"><div class="f-label">Password</div><input class="f-input" type="password" placeholder="Min 8 characters"></div>
+      <button class="btn-grad" onclick="doBizRegister()">Create Business Account</button>
+    </div>
+    <div class="biz-switch" style="margin-top:14px;"><span onclick="showScreen('profile-screen')">← Back</span></div>
+  </div>
+</div>
+
+<!-- ─── CLIENT PROFILE ─────────────────────────────────── -->
+<div class="screen" id="client-profile-screen" style="padding-bottom:80px;">
+  <div class="cl-hero" style="padding:44px 14px 12px;">
+    <div class="cl-hero-row">
+      <div class="cl-hero-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5" width="16" height="16"><path d="m15 18-6-6 6-6"/></svg></div>
+      <div class="cl-hero-av" id="cl-av">N</div>
+      <div style="flex:1;">
+        <div class="cl-hero-name" id="cl-name">Nino Beridze</div>
+        <div class="cl-hero-role" id="cl-email-lbl"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b454245446b484a4d4e4c5e585f44054c4e">[email&#160;protected]</a></div>
+        <div class="cl-hero-badge"><span style="width:7px;height:7px;border-radius:50%;background:#2ECC40;display:inline-block;"></span><span>Business · CLIENT</span></div>
+      </div>
+    </div>
+    <div class="cl-hero-stats" style="margin-top:10px;">
+      <div class="cl-stat"><div class="n" id="cl-stat-places">2</div><div class="l">Places</div></div>
+      <div class="cl-stat"><div class="n" id="cl-stat-events">5</div><div class="l">Events</div></div>
+      <div class="cl-stat"><div class="n" id="cl-stat-mgrs">3</div><div class="l">Managers</div></div>
+    </div>
+  </div>
+  <div style="flex:1;overflow-y:auto;scrollbar-width:none;padding:8px 14px 90px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+      <div onclick="showScreen('my-places-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#E8FDF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#00803A" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">My Places</div><div style="font-size:11px;color:#888;">2 venues</div></div>
+      </div>
+      <div onclick="showScreen('add-place-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#E3F2FD;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">Add Place</div><div style="font-size:11px;color:#888;">New venue</div></div>
+      </div>
+      <div onclick="showScreen('my-events-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#FFF8E1;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#E65100" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">My Events</div><div style="font-size:11px;color:#888;">5 upcoming</div></div>
+      </div>
+      <div onclick="showScreen('add-event-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#F3E5F5;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#9C27B0" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">Add Event</div><div style="font-size:11px;color:#888;">Create afisha</div></div>
+      </div>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('biz-settings-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#EEF3FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="cl-menu-txt"><h4>My Information</h4><p>Profile, company details</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('my-managers-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8F4FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="cl-menu-txt"><h4>My Managers</h4><p>3 active managers</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('biz-bookings-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8F4FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div>
+      <div class="cl-menu-txt"><h4>Bookings</h4><p>4 pending</p></div>
+      <div style="background:#E53935;color:#fff;border-radius:9px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:auto;flex-shrink:0;">4</div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="margin-left:6px;"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#FFF8E1;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#F5C518" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="cl-menu-txt"><h4>Reviews</h4><p>24 total · 4.7 ★</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8FDF0;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#00803A" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="cl-menu-txt"><h4>Messages</h4><p>3 unread</p></div>
+      <div style="background:#0EC6B8;color:#fff;border-radius:9px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:auto;flex-shrink:0;">3</div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="margin-left:6px;"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <button class="btn-outline" onclick="bizLogout()" style="margin-top:6px;color:#E53935;background:#FFE8E8;padding:11px;font-size:13px;">Sign Out</button>
+  </div>
+
+<!-- ─── MY MANAGERS ─────────────────────────────────────── -->
+<div class="screen" id="my-managers-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Managers</span>
+    <div class="g-hdr-action" onclick="showScreen('add-manager-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div id="managers-list">
+      <div class="mgr-card" onclick="editManager('Goga','Mardashvili','goga@gmail.com','+995 555 001 001')">
+        <div class="mgr-av" style="background:#1877F2;">G</div>
+        <div class="mgr-info"><h4>Goga Mardashvili</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd8d0d8deffd8d2ded6d391dcd0d2">[email&#160;protected]</a> · +995 555 001 001</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('Nina','Kikabidze','nina@gmail.com','+995 555 002 002')">
+        <div class="mgr-av" style="background:#E91E63;">N</div>
+        <div class="mgr-info"><h4>Nina Kikabidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2dcdbdcd3f2d5dfd3dbde9cd1dddf">[email&#160;protected]</a> · +995 555 002 002</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('David','Lomidze','david@gmail.com','+995 555 003 003')">
+        <div class="mgr-av" style="background:#FF9800;">D</div>
+        <div class="mgr-info"><h4>David Lomidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89ede8ffe0edc9eee4e8e0e5a7eae6e4">[email&#160;protected]</a> · +995 555 003 003</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div onclick="showScreen('add-manager-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">👤</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add new manager</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD / EDIT MANAGER ─────────────────────────────── -->
+<div class="screen" id="add-manager-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-managers-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="mgr-screen-title">Add Manager</span>
+  </div>
+  <div class="page-body">
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Name</div><input class="f-input" id="mgr-name" type="text" placeholder="Name"></div>
+      <div class="f-group"><div class="f-label">Surname</div><input class="f-input" id="mgr-surname" type="text" placeholder="Surname"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" id="mgr-email" type="email" placeholder="manager@email.com"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" id="mgr-phone" type="tel" placeholder="+995 ..."></div>
+    <div style="height:8px;"></div>
+    <button class="btn-grad" onclick="saveManager()">Save</button>
+    <button class="btn-outline" onclick="showScreen('client-profile-screen')">Cancel</button>
+    <button class="btn-danger-soft" id="mgr-delete-btn" style="display:none;" onclick="deleteManager()">Remove Manager</button>
+  </div>
+</div>
+
+<!-- ─── MY PLACES ──────────────────────────────────────── -->
+<div class="screen" id="my-places-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Places</span>
+    <div class="g-hdr-action" onclick="showScreen('add-place-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Cafe Gusto</h4><p>Italian Restaurant · Abashidze str. 24, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill published">● Published</span><span style="font-size:12px;color:#888;">★ 4.6 · 24 reviews</span></div>
+      </div>
+    </div>
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#1877F2,#0EC6B8);">🍸
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Skybar Rooftop</h4><p>Rooftop Bar · Rustaveli Ave 5, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill draft">● Draft</span><span style="font-size:12px;color:#888;">Not published yet</span></div>
+      </div>
+    </div>
+    <div onclick="showScreen('add-place-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:4px;">
+      <div style="font-size:26px;margin-bottom:5px;">📍</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Place</p>
+      <p style="font-size:12px;color:#aaa;margin-top:3px;">Register another venue</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD NEW PLACE ──────────────────────────────────── -->
+<div class="screen" id="add-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="place-screen-title">Add New Place</span>
+    <div class="w-hdr-action" onclick="saveDraft()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info *</div>
+    <div class="f-group"><div class="f-label">Name *</div><input class="f-input" type="text" placeholder="Venue name"></div>
+    <div class="f-group"><div class="f-label">Type *</div>
+      <select class="f-select"><option value="">Select type…</option><option>Restaurant</option><option>Bar</option><option>Club</option><option>Hotel</option><option>Museum</option><option>Theater</option><option>Concert Hall</option><option>Excursion</option></select>
+    </div>
+    <div class="f-group"><div class="f-label">Categories</div>
+      <div class="chip-wrap" id="cat-chips">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Cafe</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Pizzeria</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Steakhouse</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sushi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Fast Food</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Wine Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Hookah Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sport Bar</div>
+      </div>
+    </div>
+    <div class="f-group"><div class="f-label">Kitchen</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Italian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Georgian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Japanese</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">European</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Mediterranean</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Asian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Vegetarian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">American</div>
+      </div>
+    </div>
+    <div class="f-section">Address *</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">City *</div><input class="f-input" type="text" placeholder="Tbilisi"></div>
+      <div class="f-group"><div class="f-label">Region</div><input class="f-input" type="text" placeholder="Region"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Street *</div><input class="f-input" type="text" placeholder="Street name"></div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Building</div><input class="f-input" type="text" placeholder="No."></div>
+      <div class="f-group"><div class="f-label">Office / Floor</div><input class="f-input" type="text" placeholder=""></div>
+    </div>
+    <div class="f-group">
+      <div class="f-label">Pin on Map</div>
+      <div style="width:100%;height:110px;background:#e8ecf2;border-radius:12px;border:1.5px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;" onclick="showToast('Map picker opened')">
+        <svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        <span style="font-size:13px;color:#1877F2;font-weight:600;">Tap to set location</span>
+      </div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Tell guests what makes your venue special…"></textarea></div>
+    <div class="f-group">
+      <div class="f-label">Working Hours</div>
+      <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+      <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Features</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">🅿️ Parking</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">📶 WiFi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🌿 Terrace</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎵 Live music</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">💨 Hookah</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🛋 VIP room</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🐾 Pet-friendly</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">♿ Accessible</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎂 Birthday events</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🚬 Smoking area</div>
+      </div>
+    </div>
+    <div class="f-section">Social Media</div>
+    <div class="f-group"><div class="f-label">Website</div><input class="f-input" type="url" placeholder="https://"></div>
+    <div class="f-group"><div class="f-label">Instagram</div><input class="f-input" type="text" placeholder="@handle"></div>
+    <div class="f-group"><div class="f-label">Facebook</div><input class="f-input" type="text" placeholder="Page name or URL"></div>
+    <div class="f-section">Contacts</div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" placeholder="+995 ..."></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" placeholder="info@venue.com"></div>
+    <div class="f-section">Media <span style="color:#aaa;font-size:10px;">(min 1 photo recommended)</span></div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Photo</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishPlace()">Publish Place</button>
+    <button class="btn-outline" onclick="saveDraft()">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── EDIT PLACE (same form pre-filled) ─────────────── -->
+<div class="screen" id="edit-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-places-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Edit Place</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Cafe Gusto"></div>
+    <div class="f-group"><div class="f-label">Type</div><select class="f-select"><option selected>Restaurant</option><option>Bar</option><option>Club</option></select></div>
+    <div class="f-group"><div class="f-label">Status</div>
+      <div style="display:flex;gap:8px;">
+        <div onclick="setPlaceStatus(this,'published')" id="ps-pub" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #2ECC40;background:#E8FDF0;font-size:13px;font-weight:700;color:#00803A;">● Published</div>
+        <div onclick="setPlaceStatus(this,'draft')" id="ps-dft" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #eee;background:#fafafa;font-size:13px;font-weight:600;color:#888;">Draft</div>
+      </div>
+    </div>
+    <div class="f-section">Address</div>
+    <div class="f-group"><div class="f-label">City</div><input class="f-input" type="text" value="Tbilisi"></div>
+    <div class="f-group"><div class="f-label">Street</div><input class="f-input" type="text" value="Abashidze str. 24"></div>
+    <div class="f-section">Description</div>
+    <div class="f-group"><textarea class="f-textarea" rows="3">Cafe Gusto blends Italian tradition with Georgian flavors. Our terrace offers stunning city views.</textarea></div>
+    <div class="f-section">Working Hours</div>
+    <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+    <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽</div>
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#9c27b0,#3f51b5);">🍷</div>
+      <div class="media-cell media-cell-add" onclick="showToast('Add photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Add</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="showToast('Changes saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="showToast('Place deleted');goBack()">Delete Place</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── MY EVENTS ──────────────────────────────────────── -->
+<div class="screen" id="my-events-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Events</span>
+    <div class="g-hdr-action" onclick="showScreen('add-event-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px;">Upcoming</div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill"><span class="ed">26</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunset Jazz Night</h4><p>Skybar Rooftop · 20:00 · 24 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Live</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:linear-gradient(135deg,#9C27B0,#E91E63);"><span class="ed">29</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Wine Tasting: Alazani</h4><p>Cafe Gusto · 17:00 · 12 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Soon</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:#aaa;"><span class="ed">5</span><span class="em">APR</span></div>
+      <div class="ev-card-info"><h4>DJ Night: House Vibes</h4><p>Skybar · 22:00</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Draft</span>
+    </div>
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin:14px 0 8px;">Past</div>
+    <div class="ev-card-biz">
+      <div class="ev-date-pill" style="background:#ccc;"><span class="ed">20</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunday Brunch Session</h4><p>Cafe Gusto · 38 attended</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Ended</span>
+    </div>
+    <div onclick="showScreen('add-event-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">🎉</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Event</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD / EDIT EVENT ───────────────────────────────── -->
+<div class="screen" id="add-event-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="ev-screen-title">Add New Event</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Event Info</div>
+    <div class="f-group"><div class="f-label">Event Name *</div><input class="f-input" type="text" placeholder="e.g. Jazz Night, Wine Tasting…"></div>
+    <div class="f-group"><div class="f-label">Place *</div>
+      <select class="f-select"><option value="">Select from your places…</option><option>Cafe Gusto — Abashidze str. 24</option><option>Skybar Rooftop — Rustaveli Ave 5</option></select>
+    </div>
+    <div class="f-section">Date &amp; Time</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Date *</div><input class="f-input" type="date"></div>
+      <div class="f-group"><div class="f-label">Day</div><input class="f-input" type="text" placeholder="auto" readonly style="color:#aaa;"></div>
+    </div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Start Time *</div><input class="f-input" type="time" value="20:00"></div>
+      <div class="f-group"><div class="f-label">End Time</div><input class="f-input" type="time" value="00:00"></div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Describe the event, performers, highlights…"></textarea></div>
+    <div class="f-group"><div class="f-label">Price (leave blank if free)</div><input class="f-input" type="text" placeholder="e.g. €15 or Free"></div>
+    <div class="f-section">Options</div>
+    <div class="tog-row"><span class="tog-label">Enable Booking</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Publish immediately</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose poster')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Poster</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishEvent()">Publish Event</button>
+    <button class="btn-outline" onclick="showToast('Saved as draft')">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── BIZ SETTINGS ───────────────────────────────────── -->
+<div class="screen" id="biz-settings-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Settings</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Account</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Nino Beridze"></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" value="nino@cafegusto.ge"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" value="+995 598 123 456"></div>
+    <div class="f-group"><div class="f-label">New Password</div><input class="f-input" type="password" placeholder="Leave blank to keep current"></div>
+    <div class="f-section">Notifications</div>
+    <div class="tog-row"><span class="tog-label">New bookings</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">New reviews</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Marketing updates</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Danger Zone</div>
+    <button class="btn-grad" onclick="showToast('Settings saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="bizLogout()">Sign Out</button>
+  </div>
+</div>
+
+
+</div>
+
+
+<!-- ─── BIZ BOOKINGS ──────────────────────────────────── -->
+<div class="screen" id="biz-bookings-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Bookings</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Pending Confirmation (4)</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Luka Beridze</div><div style="font-size:12px;color:#888;">2 guests · Table for 2</div></div>
+          <span style="background:#FFF3E0;color:#E65100;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Pending</span>
+        </div>
+        <div style="font-size:12px;color:#555;">📅 Today, 19:00 · Cafe Gusto</div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button onclick="showToast('Booking confirmed ✓')" style="flex:1;background:#1877F2;color:#fff;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Confirm</button>
+          <button onclick="showToast('Booking declined')" style="flex:1;background:#FFE8E8;color:#E53935;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Decline</button>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Ana Kvitashvili</div><div style="font-size:12px;color:#888;">4 guests · Table for 4</div></div>
+          <span style="background:#FFF3E0;color:#E65100;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Pending</span>
+        </div>
+        <div style="font-size:12px;color:#555;">📅 Tomorrow, 20:30 · Cafe Gusto</div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button onclick="showToast('Booking confirmed ✓')" style="flex:1;background:#1877F2;color:#fff;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Confirm</button>
+          <button onclick="showToast('Booking declined')" style="flex:1;background:#FFE8E8;color:#E53935;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Decline</button>
+        </div>
+      </div>
+    </div>
+    <div class="f-section" style="margin-top:16px;">Confirmed (2)</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Giorgi Mamulashvili</div><div style="font-size:12px;color:#888;">3 guests · Table for 4</div></div>
+          <span style="background:#E8FDF0;color:#00803A;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Confirmed</span>
+        </div>
+        <div style="font-size:12px;color:#555;margin-top:6px;">📅 Tonight, 21:00 · Skybar Rooftop</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── BIZ REVIEWS ────────────────────────────────────── -->
+<div class="screen" id="biz-reviews-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Reviews</span>
+  </div>
+  <div class="page-body">
+    <div style="background:#fff;border-radius:14px;padding:14px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="text-align:center;"><div style="font-size:36px;font-weight:800;color:#111;">4.7</div><div style="color:#F5C518;font-size:18px;">★★★★★</div><div style="font-size:11px;color:#888;margin-top:2px;">24 reviews</div></div>
+      <div style="flex:1;">
+        <div style="font-size:12px;color:#555;margin-bottom:4px;">Based on all venues</div>
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">5</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:70%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">4</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:20%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">3</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:7%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">2</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:2%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">1</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:1%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="f-section">Recent Reviews</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Maria Popova</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★★</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Amazing atmosphere and great cocktails! Will definitely come back."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">2 days ago · Cafe Gusto</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Alex Kim</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★☆</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Great view from the rooftop. Service was a bit slow but the drinks made up for it."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">5 days ago · Skybar Rooftop</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Tina Maisuradze</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★★</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Best wine selection in Tbilisi! The jazz evening was perfect."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">1 week ago · Cafe Gusto</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── BIZ MESSAGES ───────────────────────────────────── -->
+<div class="screen" id="biz-messages-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Messages</span>
+  </div>
+  <div class="page-body">
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1877F2,#0EC6B8);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">L</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Luka Beridze</span><span style="font-size:11px;color:#aaa;">2m</span></div>
+          <div style="font-size:12px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Can I book a table for 4 for tonight?</div>
+        </div>
+        <div style="width:18px;height:18px;background:#E53935;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">2</div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#E91E63,#9C27B0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">A</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Ana Kvitashvili</span><span style="font-size:11px;color:#aaa;">15m</span></div>
+          <div style="font-size:12px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Is the jazz event still on for Friday?</div>
+        </div>
+        <div style="width:18px;height:18px;background:#E53935;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">1</div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#FF9800,#F44336);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">G</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Giorgi Mamulashvili</span><span style="font-size:11px;color:#aaa;">1h</span></div>
+          <div style="font-size:12px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Thanks for the confirmation!</div>
+        </div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#4CAF50,#009688);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">T</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Tina Maisuradze</span><span style="font-size:11px;color:#aaa;">3h</span></div>
+          <div style="font-size:12px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Loved the wine tasting event!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── GLOBAL BOTTOM NAV ───────────────────────────────── -->
+<nav class="global-bnav" id="global-nav" style="display:flex;">
+  <div class="ni" data-nav="map" onclick="showScreen('map-screen')">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0L9 7"/></svg>
+    <span>Map</span>
+  </div>
+  <div class="ni" data-nav="filter" onclick="showScreen('filter-screen')">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <span>Search</span>
+  </div>
+  <div class="ni" data-nav="events" onclick="showScreen('events-screen')">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Events</span>
+  </div>
+  <div class="ni" data-nav="favorites" onclick="showScreen('favorites-screen')">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <span>Saved</span>
+  </div>
+  <div class="ni" data-nav="profile" onclick="showScreen('profile-screen')">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span>Profile</span>
+  </div>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<
+
+<div class="screen sub-screen" id="profile-edit-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Edit Profile</span></div>
+  <div class="sub-body" style="overflow-y:auto;">
+    <div style="text-align:center;margin-bottom:18px;">
+      <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#0EC6B8,#1877F2);display:inline-flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;position:relative;">A
+        <div style="position:absolute;bottom:0;right:0;width:22px;height:22px;background:#1877F2;border-radius:50%;border:2px solid #f8f8f8;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          <svg fill="#fff" viewBox="0 0 24 24" width="10" height="10"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm17.71-10.21a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+      </div>
+      <p style="font-size:12px;color:#888;margin-top:6px;">Tap to change photo</p>
+    </div>
+    <div class="form-row"><div class="form-label">Full Name</div><input class="form-input" type="text" value="Alex Petrov"></div>
+    <div class="form-row"><div class="form-label">Email</div><input class="form-input" type="email" value="alex@vibes.city"></div>
+    <div class="form-row"><div class="form-label">City</div><input class="form-input" type="text" value="Amsterdam"></div>
+    <div class="form-row"><div class="form-label">Bio</div><textarea class="form-input" rows="2" style="resize:none;">City explorer & food enthusiast 🌆</textarea></div>
+    <button class="save-btn" onclick="showToast('Profile saved! ✓');showScreen('profile-screen')">Save Changes</button>
+  </div>
+<
+
+<div class="screen sub-screen" id="profile-reservations-screen"
+  style="background:linear-gradient(160deg,#0EC6B8 0%,#1877F2 55%,#1035C8 100%);padding-bottom:80px;">
+  <div class="sb dark" style="background:transparent;"><span class="time" style="color:#fff">9:30</span></div>
+  <div class="sub-header" style="background:transparent;border:none;">
+    <div class="sub-back" style="background:rgba(255,255,255,.2);" onclick="showScreen('profile-screen')">
+      <svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <span class="sub-title" style="color:#fff;">My Reservations</span>
+  </div>
+
+  <!-- Table Reservations -->
+  <div class="res-section">🪑 Table Bookings</div>
+  <div class="res-list">
+
+    <!-- Reservation 1 — Confirmed -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#0EC6B8,#1877F2)">🍸</div>
+        <div class="res-card-title">
+          <h4>Skybar Rooftop</h4>
+          <p>Table T3 · Rooftop Floor</p>
+        </div>
+        <span class="res-status confirmed">Confirmed</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">26 Mar 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">20:00</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">2 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Window seat</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Skybar')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Reservation 2 — Confirmed -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#b8a080,#8a6a40)">🍽</div>
+        <div class="res-card-title">
+          <h4>Cafe Gusto</h4>
+          <p>Table T7 · Main Hall</p>
+        </div>
+        <span class="res-status confirmed">Confirmed</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">29 Mar 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">19:30</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">4 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Centre hall</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Cafe Gusto')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Reservation 3 — Pending -->
+    <div class="res-card">
+      <div class="res-card-header">
+        <div class="res-card-icon" style="background:linear-gradient(135deg,#00BCD4,#4CAF50)">🍣</div>
+        <div class="res-card-title">
+          <h4>Zen Sushi</h4>
+          <p>Table TR2 · Terrace</p>
+        </div>
+        <span class="res-status pending">Pending</span>
+      </div>
+      <div class="res-card-body">
+        <div class="res-detail-row">
+          <div class="res-detail"><span class="lbl">Date</span><span class="val">2 Apr 2026</span></div>
+          <div class="res-detail"><span class="lbl">Time</span><span class="val">13:00</span></div>
+          <div class="res-detail"><span class="lbl">Guests</span><span class="val">3 people</span></div>
+          <div class="res-detail"><span class="lbl">Table</span><span class="val">Terrace</span></div>
+        </div>
+      </div>
+      <div class="res-card-actions">
+        <button class="res-action-btn cancel" onclick="showToast('Reservation cancelled')">Cancel</button>
+        <button class="res-action-btn edit" onclick="openBooking()">Change table</button>
+        <button class="res-action-btn navigate" onclick="findTheWay('Zen Sushi')">Navigate</button>
+      </div>
+    </div>
+
+    <!-- Tickets section header -->
+    <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.65);text-transform:uppercase;
+      letter-spacing:1px;padding:8px 0 8px;">🎟 Event Tickets</div>
+
+    <!-- Ticket 1 -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div class="ticket-emoji">🎷</div>
+        <div class="ticket-info">
+          <h4>Sunset Jazz Night</h4>
+          <p>Skybar Rooftop · Live performance</p>
+        </div>
+        <span class="res-status confirmed">Active</span>
+      </div>
+      <div class="ticket-mid">
+        <div class="res-detail"><span class="lbl">Date</span><span class="val">26 Mar 2026</span></div>
+        <div class="res-detail"><span class="lbl">Time</span><span class="val">20:00</span></div>
+        <div class="res-detail"><span class="lbl">Seat</span><span class="val">Standing</span></div>
+      </div>
+      <div class="ticket-bottom">
+        <span class="ticket-price">Free entry</span>
+        <div class="ticket-qr" onclick="showToast('QR code shown')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticket 2 -->
+    <div class="ticket-card">
+      <div class="ticket-top">
+        <div class="ticket-emoji">🎧</div>
+        <div class="ticket-info">
+          <h4>Neon Rave: Techno Night</h4>
+          <p>Neon Club · DJ KRAS b2b ZOLA</p>
+        </div>
+        <span class="res-status pending">Pending</span>
+      </div>
+      <div class="ticket-mid">
+        <div class="res-detail"><span class="lbl">Date</span><span class="val">27 Mar 2026</span></div>
+        <div class="res-detail"><span class="lbl">Time</span><span class="val">23:00</span></div>
+        <div class="res-detail"><span class="lbl">Seat</span><span class="val">General</span></div>
+      </div>
+      <div class="ticket-bottom">
+        <span class="ticket-price">€20.00</span>
+        <div class="ticket-qr" onclick="showToast('QR code shown')">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- res-list -->
+<
+
+<div class="screen sub-screen" id="profile-reviews-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">My Reviews</span></div>
+  <div class="sub-body" style="overflow-y:auto;">
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍸 Skybar</span><span class="sr-stars">★★★★★</span></div><p class="sr-txt">Incredible rooftop views and amazing cocktails. The jazz night was unforgettable!</p><p style="font-size:11px;color:#aaa;margin-top:5px;">2 days ago</p></div>
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍽 Cafe Gusto</span><span class="sr-stars">★★★★☆</span></div><p class="sr-txt">Excellent food and service. The wine tasting was a highlight of our trip to Tbilisi.</p><p style="font-size:11px;color:#aaa;margin-top:5px;">1 week ago</p></div>
+    <div class="small-rev"><div class="sr-hdr"><span class="sr-place">🍣 Zen Sushi</span><span class="sr-stars">★★★★★</span></div><p class="sr-txt">Best sushi in the city. Fresh, creative, and perfectly presented. Will return!</p><p style="font-size:11px;color:#aaa;margin-top:5px;">2 weeks ago</p></div>
+    <button class="save-btn" style="background:var(--blue);" onclick="openVenue('Cafe Gusto','Italian Restaurant')">+ Write New Review</button>
+  </div>
+<
+
+<div class="screen sub-screen" id="profile-events-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Events Attending</span></div>
+  <div class="sub-body">
+    <div class="ev-row-sm" onclick="openVenue('Skybar','Rooftop Bar')">
+      <div class="ev-date-sm"><span class="d">26</span><span class="m">MAR</span></div>
+      <div class="ev-info-sm"><h4>Sunset Jazz Night</h4><p>Skybar Rooftop · 20:00</p></div>
+      <span style="background:#E8FFE8;color:#00803A;padding:4px 10px;border-radius:10px;font-size:11px;font-weight:700;">LIVE</span>
+    </div>
+    <div class="ev-row-sm" onclick="openVenue('Neon Club','Nightclub')">
+      <div class="ev-date-sm" style="background:#9C27B0;"><span class="d">27</span><span class="m">MAR</span></div>
+      <div class="ev-info-sm"><h4>Neon Rave: Techno</h4><p>Neon Club · 23:00</p></div>
+      <span style="background:#F3E5F5;color:#9C27B0;padding:4px 10px;border-radius:10px;font-size:11px;font-weight:700;">Tomorrow</span>
+    </div>
+    <div style="margin-top:16px;padding:14px;background:#EEF3FF;border-radius:14px;text-align:center;">
+      <p style="font-size:14px;font-weight:600;color:#1877F2;">Looking for more events?</p>
+      <button onclick="showScreen('events-screen')" style="margin-top:10px;background:#1877F2;color:#fff;border:none;border-radius:18px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;">Browse Events</button>
+    </div>
+  </div>
+<
+
+<div class="screen sub-screen" id="profile-notifications-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Notifications</span></div>
+  <div class="sub-body">
+    <div class="notif-row"><div class="notif-label"><h4>Events Near Me</h4><p>Live events happening nearby</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>New Places</h4><p>When new venues open</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Deals & Offers</h4><p>Special offers from saved places</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Review Likes</h4><p>When someone likes your review</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="notif-row"><div class="notif-label"><h4>Booking Reminders</h4><p>2 hours before reservation</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <button class="save-btn" onclick="showToast('Notification settings saved ✓');showScreen('profile-screen')">Save Settings</button>
+  </div>
+<
+
+<div class="screen sub-screen" id="profile-privacy-screen" style="background:#f8f8f8;padding-bottom:80px;">
+  <div class="sb light"><span class="time">9:30</span></div>
+  <div class="sub-header"><div class="sub-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div><span class="sub-title">Privacy & Security</span></div>
+  <div class="sub-body">
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/></svg></div><div class="privacy-txt"><h4>Profile Visibility</h4><p>Public · Anyone can see your profile</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></div><div class="privacy-txt"><h4>Location Sharing</h4><p>Share location with app</p></div><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="privacy-txt"><h4>Two-Factor Auth</h4><p>Extra security for your account</p></div><div class="toggle" onclick="this.classList.toggle('on')"></div></div>
+    <div class="privacy-row" style="cursor:pointer;" onclick="showToast('Password reset email sent ✓')"><div class="privacy-ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 2H3v16h5l3 3 3-3h7V2z"/><path d="M11 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM8 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM14 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/></svg></div><div class="privacy-txt"><h4>Change Password</h4><p>Send reset link to email</p></div><svg class="parrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></div>
+    <button class="save-btn" onclick="showToast('Privacy settings saved ✓');showScreen('profile-screen')">Save Settings</button>
+  </div>
+<
