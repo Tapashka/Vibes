@@ -1,83 +1,222 @@
-# Vibes in the City 🎵
+# 🎵 Vibes in the City
 
-Mobile app prototype for discovering nightlife venues, events, and experiences in Tbilisi.
+> Discover nightlife, restaurants and events in Tbilisi, Georgia.
 
-## Quick Start
+A full-stack mobile app prototype — single-file frontend + Node.js REST API backend.
 
-Open `vibes-unified.html` in any modern browser — everything is in one file.
+---
 
-## Project Structure
+## 📱 Live Demo
+
+Open `frontend/index.html` in any browser — works without a backend.
+
+---
+
+## 🗂 Project Structure
 
 ```
 vibes-in-the-city/
-├── vibes-unified.html      ← Full working app (single file)
-├── index.html              ← Multi-file entry point
-├── css/
-│   ├── main.css            ← Core styles (phone, screens, map, UI)
-│   └── business.css        ← Business cabinet styles
-├── js/
-│   ├── data.js             ← Mock data, NAV_MAP, constants
-│   ├── map.js              ← Leaflet map, pins, routing
-│   ├── venue.js            ← Venue card, tabs, AI chat
-│   ├── booking.js          ← Table booking, floor plan
-│   └── utils.js            ← Search, filters, helpers
-└── screens/
-    ├── splash.html         ← Splash screen
-    ├── map.html            ← Main map screen
-    ├── venue.html          ← Venue + booking + filter
-    ├── events.html         ← Tonight's Vibes
-    ├── favorites.html      ← Saved Places
-    ├── profile.html        ← User profile + sub-screens
-    ├── auth.html           ← Login + Business login
-    ├── business.html       ← Business cabinet (12 screens)
-    └── nav.html            ← Bottom navigation
+├── frontend/
+│   └── index.html          ← Full app (single file, works standalone)
+├── backend/
+│   ├── src/
+│   │   ├── app.js          ← Express server + Socket.io
+│   │   ├── config/
+│   │   │   ├── database.js ← PostgreSQL pool
+│   │   │   └── migrate.js  ← DB schema migration
+│   │   ├── middleware/
+│   │   │   ├── auth.js     ← JWT auth, roles
+│   │   │   ├── errorHandler.js
+│   │   │   └── upload.js   ← File uploads
+│   │   └── routes/
+│   │       ├── auth.js     ← Register, login, profile
+│   │       ├── venues.js   ← Venues CRUD + geo search
+│   │       ├── crud.js     ← Events, Bookings, Reviews, Messages, Managers
+│   │       ├── maps.js     ← Geocoding, routing, nearby
+│   │       └── ai.js       ← Claude AI proxy
+│   ├── package.json
+│   └── .env.example
+└── README.md
 ```
 
-## Features
+---
 
+## ✨ Features
+
+### Frontend (index.html)
 | Feature | Status |
 |---------|--------|
-| 🗺️ Interactive Leaflet map | ✅ |
-| 📍 Venue pins with photos | ✅ |
-| 🔍 Search with live results | ✅ |
-| 📅 Events calendar | ✅ |
-| ❤️ Save favourite places | ✅ |
-| 🎯 Table booking (floor plan) | ✅ |
+| 🗺️ Interactive map (Leaflet + OpenStreetMap/MapTiler) | ✅ |
+| 🧭 Navigation — walk & drive (OSRM routing) | ✅ |
+| 🛰️ Map / Satellite toggle | ✅ |
+| 📍 Venue pins with live indicators | ✅ |
+| 🔍 Live search with dropdown | ✅ |
+| 📅 Events — Tonight's Vibes | ✅ |
+| ❤️ Saved Places | ✅ |
+| 🎯 Table booking with floor plan | ✅ |
 | 👤 User profile | ✅ |
-| 💼 Business Cabinet | ✅ |
-| 🤖 AI promo content (Claude API) | ✅ |
-| ✨ AI description improvement | ✅ |
-| 📣 TikTok / Instagram / Facebook posts | ✅ |
+| 💼 Business Cabinet (12 screens) | ✅ |
+| 🤖 AI Chat — Vibes AI (Claude) | ✅ |
+| ✨ AI Promo Content — TikTok/Instagram/Facebook | ✅ |
+| 📣 AI Description Improvement | ✅ |
 
-## Business Cabinet Screens
+### Backend API
+| Module | Endpoints |
+|--------|-----------|
+| Auth | Register, Login, Refresh, Profile |
+| Venues | CRUD, Geo search, Favorites |
+| Events | CRUD, Tonight's Vibes feed |
+| Bookings | Create, Confirm/Decline, History |
+| Reviews | Submit, Reply, Rating stats |
+| Messages | Conversations, Real-time (WebSocket) |
+| Managers | CRUD |
+| Maps | Geocoding, Routing, Nearby |
+| AI | Promo generator, Chat, Description |
+| Upload | Photos & video |
 
-- Dashboard (grid + list)
-- My Places + Add/Edit Place
-- My Events + Add Event with AI Promo
-- My Managers + Add Manager
-- Bookings (confirm/decline)
-- Reviews (rating + list)
-- Messages (chat list)
-- Settings
+---
 
-## Tech Stack
+## 🚀 Quick Start
 
-- Vanilla HTML/CSS/JS (no frameworks)
-- [Leaflet.js](https://leafletjs.com/) for maps
-- [Anthropic Claude API](https://anthropic.com) for AI features
-- Google Fonts (Inter + Playfair Display)
+### Frontend (no backend needed)
 
-## Deployment
-
-### GitHub Pages
-1. Push to GitHub
-2. Settings → Pages → Branch: main → / (root)
-3. App available at `https://username.github.io/repo-name`
-
-### Local
+Just open in browser:
 ```bash
-# Any static server works:
-npx serve .
-# or
-python3 -m http.server 8080
+open frontend/index.html
 ```
+
+For AI features — the app calls Anthropic API directly from the browser.
+
+### Backend
+
+```bash
+cd backend
+npm install
+cp .env.example .env
+# Edit .env — add DATABASE_URL and ANTHROPIC_API_KEY
+
+# Create PostgreSQL database
+createdb vibes_db
+
+# Run migration (creates all tables)
+npm run db:migrate
+
+# Start server
+npm run dev
+```
+
+---
+
+## 🗺️ Maps Setup
+
+The app uses **free maps** — no credit card required:
+
+| Service | Used for | Cost |
+|---------|----------|------|
+| OpenStreetMap + Leaflet | Map display (default) | **Free forever** |
+| MapTiler | Better looking tiles (optional) | **Free** 100k/month |
+| OSRM | Walk + drive routing | **Free** public server |
+| Nominatim | Geocoding (address search) | **Free** |
+| PostGIS | Nearby venues query | **Free** |
+
+**Optional: Better map tiles with MapTiler**
+1. Sign up free at [cloud.maptiler.com](https://cloud.maptiler.com)
+2. Copy your API key
+3. In `frontend/index.html`, find `window.MAPTILER_KEY = ''` and paste your key
+4. Or set `MAPTILER_KEY=yourkey` in backend `.env`
+
+---
+
+## 🧭 Navigation
+
+Navigation is built into the map. From any venue:
+1. Tap **"Find the Way"**
+2. Choose 🚶 Walk or 🚗 Drive
+3. See route on map + turn-by-turn steps + ETA
+4. Tap **"Open in Google Maps"** for real GPS navigation
+
+---
+
+## 🤖 AI Features
+
+Uses **Anthropic Claude** API:
+- **Vibes AI Chat** — ask for venue/event recommendations
+- **Add Event → Generate Promo** — TikTok, Instagram, Facebook posts
+- **Improve Description** — AI rewrites event descriptions
+
+Set your API key in backend `.env`:
+```
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+---
+
+## 🌍 Deploy
+
+### GitHub Pages (frontend only)
+1. Push to GitHub
+2. Settings → Pages → Branch: main → `/frontend`
+3. Access at `https://username.github.io/vibes-in-the-city`
+
+### Railway (backend)
+```bash
+npm install -g @railway/cli
+railway login
+cd backend
+railway init
+railway add postgresql
+railway up
+```
+
+### Render (backend)
+1. Connect GitHub repo
+2. Root directory: `backend`
+3. Build command: `npm install`
+4. Start command: `npm start`
+5. Add PostgreSQL database
+6. Set environment variables from `.env.example`
+
+---
+
+## 🔑 Environment Variables
+
+See `backend/.env.example` for all variables:
+
+```env
+PORT=3000
+DATABASE_URL=postgresql://user:pass@localhost:5432/vibes_db
+JWT_SECRET=your-secret-key
+ANTHROPIC_API_KEY=sk-ant-...
+MAPTILER_KEY=optional-for-better-maps
+```
+
+---
+
+## 📡 API Reference
+
+Full API documentation at `GET /api` after starting the server.
+
+Key endpoints:
+```
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/venues?lat=41.69&lng=44.80&radius=1000
+GET  /api/events?city=Tbilisi
+POST /api/bookings
+POST /api/ai/generate-promo
+GET  /api/maps/route?from_lat=...&to_lat=...
+```
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend:** Vanilla HTML/CSS/JS · Leaflet.js · OSRM routing
+
+**Backend:** Node.js · Express · PostgreSQL + PostGIS · Socket.io · JWT · Anthropic Claude
+
+---
+
+## 📄 License
+
+MIT
