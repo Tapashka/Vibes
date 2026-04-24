@@ -1,0 +1,52 @@
+<div class="screen" id="login-screen" style="background:linear-gradient(160deg,#0EC6B8,#1877F2 55%,#1035C8);justify-content:flex-end;">
+  <div class="biz-login-card">
+    <div class="biz-login-logo"><h1>Vibes</h1><p>Choose how to continue</p></div>
+    <div class="role-cards">
+      <div class="role-card sel" id="rc-guest" onclick="selectRole('guest')">
+        <div class="rc-icon">👤</div>
+        <div class="rc-title">Guest</div>
+        <div class="rc-sub">Browse freely</div>
+      </div>
+      <div class="role-card" id="rc-client" onclick="selectRole('client')">
+        <div class="rc-icon">🏢</div>
+        <div class="rc-title">Business</div>
+        <div class="rc-sub">Manage venue</div>
+      </div>
+    </div>
+    <button onclick="doGuestLogin()" id="login-main-btn" style="width:100%;background:linear-gradient(135deg,#0EC6B8,#1877F2);color:#fff;border:none;border-radius:14px;padding:15px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;">Enter as Guest</button>
+    <div class="biz-switch" style="margin-top:14px;">Business account? <span onclick="showScreen('biz-login-screen')">Sign In</span></div>
+  </div>
+<
+
+<div class="screen" id="biz-login-screen" style="background:linear-gradient(160deg,#0EC6B8,#1877F2 55%,#1035C8);justify-content:flex-end;">
+  <div class="biz-login-card">
+    <div class="biz-login-logo"><h1>Business</h1><p>Sign in to manage your venues</p></div>
+    <div class="biz-tab-row">
+      <div class="biz-tab active" id="btab-login" onclick="bizTab('login')">Sign In</div>
+      <div class="biz-tab" id="btab-register" onclick="bizTab('register')">Register</div>
+    </div>
+    <!-- LOGIN FIELDS -->
+    <div id="biz-login-fields">
+      <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" id="bl-email" placeholder="your@email.com"></div>
+      <div class="f-group"><div class="f-label">Password</div><input class="f-input" type="password" id="bl-pass" placeholder="Password"></div>
+      <button class="btn-grad" onclick="doBizLogin()">Sign In</button>
+      <div class="biz-magic-row"><span>or</span></div>
+      <button class="biz-magic-btn" onclick="doMagicLink()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        Send Magic Link
+      </button>
+    </div>
+    <!-- REGISTER FIELDS -->
+    <div id="biz-register-fields" style="display:none;">
+      <div class="f-row2">
+        <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" placeholder="Name"></div>
+        <div class="f-group"><div class="f-label">Surname</div><input class="f-input" type="text" placeholder="Surname"></div>
+      </div>
+      <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" placeholder="your@email.com"></div>
+      <div class="f-group"><div class="f-label">Phone (optional)</div><input class="f-input" type="tel" placeholder="+995 ..."></div>
+      <div class="f-group"><div class="f-label">Password</div><input class="f-input" type="password" placeholder="Min 8 characters"></div>
+      <button class="btn-grad" onclick="doBizRegister()">Create Business Account</button>
+    </div>
+    <div class="biz-switch" style="margin-top:14px;"><span onclick="showScreen('profile-screen')">← Back</span></div>
+  </div>
+<

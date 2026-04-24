@@ -1,0 +1,820 @@
+<div class="screen" id="client-profile-screen" style="padding-bottom:80px;">
+  <div class="cl-hero" style="padding:44px 14px 12px;">
+    <div class="cl-hero-row">
+      <div class="cl-hero-back" onclick="showScreen('profile-screen')"><svg fill="none" stroke="#fff" viewBox="0 0 24 24" stroke-width="2.5" width="16" height="16"><path d="m15 18-6-6 6-6"/></svg></div>
+      <div class="cl-hero-av" id="cl-av">N</div>
+      <div style="flex:1;">
+        <div class="cl-hero-name" id="cl-name">Nino Beridze</div>
+        <div class="cl-hero-role" id="cl-email-lbl"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b454245446b484a4d4e4c5e585f44054c4e">[email&#160;protected]</a></div>
+        <div class="cl-hero-badge"><span style="width:7px;height:7px;border-radius:50%;background:#2ECC40;display:inline-block;"></span><span>Business · CLIENT</span></div>
+      </div>
+    </div>
+    <div class="cl-hero-stats" style="margin-top:10px;">
+      <div class="cl-stat"><div class="n" id="cl-stat-places">2</div><div class="l">Places</div></div>
+      <div class="cl-stat"><div class="n" id="cl-stat-events">5</div><div class="l">Events</div></div>
+      <div class="cl-stat"><div class="n" id="cl-stat-mgrs">3</div><div class="l">Managers</div></div>
+    </div>
+  </div>
+  <div style="flex:1;overflow-y:auto;scrollbar-width:none;padding:8px 14px 90px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+      <div onclick="showScreen('my-places-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#E8FDF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#00803A" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">My Places</div><div style="font-size:11px;color:#888;">2 venues</div></div>
+      </div>
+      <div onclick="showScreen('add-place-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#E3F2FD;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">Add Place</div><div style="font-size:11px;color:#888;">New venue</div></div>
+      </div>
+      <div onclick="showScreen('my-events-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#FFF8E1;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#E65100" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">My Events</div><div style="font-size:11px;color:#888;">5 upcoming</div></div>
+      </div>
+      <div onclick="showScreen('add-event-screen')" style="background:#fff;border-radius:14px;padding:14px 12px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.05);display:flex;align-items:center;gap:10px;">
+        <div style="width:36px;height:36px;background:#F3E5F5;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg fill="none" stroke="#9C27B0" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div><div style="font-size:13px;font-weight:600;color:#111;">Add Event</div><div style="font-size:11px;color:#888;">Create afisha</div></div>
+      </div>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('biz-settings-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#EEF3FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="cl-menu-txt"><h4>My Information</h4><p>Profile, company details</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('my-managers-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8F4FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="cl-menu-txt"><h4>My Managers</h4><p>3 active managers</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" onclick="showScreen('biz-bookings-screen')" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8F4FF;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div>
+      <div class="cl-menu-txt"><h4>Bookings</h4><p>4 pending</p></div>
+      <div style="background:#E53935;color:#fff;border-radius:9px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:auto;flex-shrink:0;">4</div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="margin-left:6px;"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#FFF8E1;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#F5C518" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="cl-menu-txt"><h4>Reviews</h4><p>24 total · 4.7 ★</p></div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="cl-menu-row" style="padding:11px 12px;margin-bottom:7px;">
+      <div class="cl-menu-ic" style="background:#E8FDF0;width:36px;height:36px;border-radius:10px;"><svg fill="none" stroke="#00803A" viewBox="0 0 24 24" stroke-width="2" width="17" height="17"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="cl-menu-txt"><h4>Messages</h4><p>3 unread</p></div>
+      <div style="background:#0EC6B8;color:#fff;border-radius:9px;padding:2px 8px;font-size:11px;font-weight:700;margin-left:auto;flex-shrink:0;">3</div>
+      <svg class="cl-menu-arr" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="margin-left:6px;"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <button class="btn-outline" onclick="bizLogout()" style="margin-top:6px;color:#E53935;background:#FFE8E8;padding:11px;font-size:13px;">Sign Out</button>
+  </div>
+
+<!-- ─── MY MANAGERS ─────────────────────────────────────── -->
+<div class="screen" id="my-managers-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Managers</span>
+    <div class="g-hdr-action" onclick="showScreen('add-manager-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div id="managers-list">
+      <div class="mgr-card" onclick="editManager('Goga','Mardashvili','goga@gmail.com','+995 555 001 001')">
+        <div class="mgr-av" style="background:#1877F2;">G</div>
+        <div class="mgr-info"><h4>Goga Mardashvili</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd8d0d8deffd8d2ded6d391dcd0d2">[email&#160;protected]</a> · +995 555 001 001</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('Nina','Kikabidze','nina@gmail.com','+995 555 002 002')">
+        <div class="mgr-av" style="background:#E91E63;">N</div>
+        <div class="mgr-info"><h4>Nina Kikabidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2dcdbdcd3f2d5dfd3dbde9cd1dddf">[email&#160;protected]</a> · +995 555 002 002</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('David','Lomidze','david@gmail.com','+995 555 003 003')">
+        <div class="mgr-av" style="background:#FF9800;">D</div>
+        <div class="mgr-info"><h4>David Lomidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89ede8ffe0edc9eee4e8e0e5a7eae6e4">[email&#160;protected]</a> · +995 555 003 003</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div onclick="showScreen('add-manager-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">👤</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add new manager</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD / EDIT MANAGER ─────────────────────────────── -->
+<div class="screen" id="add-manager-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-managers-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="mgr-screen-title">Add Manager</span>
+  </div>
+  <div class="page-body">
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Name</div><input class="f-input" id="mgr-name" type="text" placeholder="Name"></div>
+      <div class="f-group"><div class="f-label">Surname</div><input class="f-input" id="mgr-surname" type="text" placeholder="Surname"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" id="mgr-email" type="email" placeholder="manager@email.com"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" id="mgr-phone" type="tel" placeholder="+995 ..."></div>
+    <div style="height:8px;"></div>
+    <button class="btn-grad" onclick="saveManager()">Save</button>
+    <button class="btn-outline" onclick="showScreen('client-profile-screen')">Cancel</button>
+    <button class="btn-danger-soft" id="mgr-delete-btn" style="display:none;" onclick="deleteManager()">Remove Manager</button>
+  </div>
+</div>
+
+<!-- ─── MY PLACES ──────────────────────────────────────── -->
+<div class="screen" id="my-places-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Places</span>
+    <div class="g-hdr-action" onclick="showScreen('add-place-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Cafe Gusto</h4><p>Italian Restaurant · Abashidze str. 24, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill published">● Published</span><span style="font-size:12px;color:#888;">★ 4.6 · 24 reviews</span></div>
+      </div>
+    </div>
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#1877F2,#0EC6B8);">🍸
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Skybar Rooftop</h4><p>Rooftop Bar · Rustaveli Ave 5, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill draft">● Draft</span><span style="font-size:12px;color:#888;">Not published yet</span></div>
+      </div>
+    </div>
+    <div onclick="showScreen('add-place-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:4px;">
+      <div style="font-size:26px;margin-bottom:5px;">📍</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Place</p>
+      <p style="font-size:12px;color:#aaa;margin-top:3px;">Register another venue</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD NEW PLACE ──────────────────────────────────── -->
+<div class="screen" id="add-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="place-screen-title">Add New Place</span>
+    <div class="w-hdr-action" onclick="saveDraft()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info *</div>
+    <div class="f-group"><div class="f-label">Name *</div><input class="f-input" type="text" placeholder="Venue name"></div>
+    <div class="f-group"><div class="f-label">Type *</div>
+      <select class="f-select"><option value="">Select type…</option><option>Restaurant</option><option>Bar</option><option>Club</option><option>Hotel</option><option>Museum</option><option>Theater</option><option>Concert Hall</option><option>Excursion</option></select>
+    </div>
+    <div class="f-group"><div class="f-label">Categories</div>
+      <div class="chip-wrap" id="cat-chips">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Cafe</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Pizzeria</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Steakhouse</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sushi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Fast Food</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Wine Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Hookah Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sport Bar</div>
+      </div>
+    </div>
+    <div class="f-group"><div class="f-label">Kitchen</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Italian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Georgian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Japanese</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">European</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Mediterranean</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Asian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Vegetarian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">American</div>
+      </div>
+    </div>
+    <div class="f-section">Address *</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">City *</div><input class="f-input" type="text" placeholder="Tbilisi"></div>
+      <div class="f-group"><div class="f-label">Region</div><input class="f-input" type="text" placeholder="Region"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Street *</div><input class="f-input" type="text" placeholder="Street name"></div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Building</div><input class="f-input" type="text" placeholder="No."></div>
+      <div class="f-group"><div class="f-label">Office / Floor</div><input class="f-input" type="text" placeholder=""></div>
+    </div>
+    <div class="f-group">
+      <div class="f-label">Pin on Map</div>
+      <div style="width:100%;height:110px;background:#e8ecf2;border-radius:12px;border:1.5px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;" onclick="showToast('Map picker opened')">
+        <svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        <span style="font-size:13px;color:#1877F2;font-weight:600;">Tap to set location</span>
+      </div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Tell guests what makes your venue special…"></textarea></div>
+    <div class="f-group">
+      <div class="f-label">Working Hours</div>
+      <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+      <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Features</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">🅿️ Parking</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">📶 WiFi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🌿 Terrace</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎵 Live music</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">💨 Hookah</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🛋 VIP room</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🐾 Pet-friendly</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">♿ Accessible</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎂 Birthday events</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🚬 Smoking area</div>
+      </div>
+    </div>
+    <div class="f-section">Social Media</div>
+    <div class="f-group"><div class="f-label">Website</div><input class="f-input" type="url" placeholder="https://"></div>
+    <div class="f-group"><div class="f-label">Instagram</div><input class="f-input" type="text" placeholder="@handle"></div>
+    <div class="f-group"><div class="f-label">Facebook</div><input class="f-input" type="text" placeholder="Page name or URL"></div>
+    <div class="f-section">Contacts</div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" placeholder="+995 ..."></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" placeholder="info@venue.com"></div>
+    <div class="f-section">Media <span style="color:#aaa;font-size:10px;">(min 1 photo recommended)</span></div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Photo</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishPlace()">Publish Place</button>
+    <button class="btn-outline" onclick="saveDraft()">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── EDIT PLACE (same form pre-filled) ─────────────── -->
+<div class="screen" id="edit-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-places-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Edit Place</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Cafe Gusto"></div>
+    <div class="f-group"><div class="f-label">Type</div><select class="f-select"><option selected>Restaurant</option><option>Bar</option><option>Club</option></select></div>
+    <div class="f-group"><div class="f-label">Status</div>
+      <div style="display:flex;gap:8px;">
+        <div onclick="setPlaceStatus(this,'published')" id="ps-pub" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #2ECC40;background:#E8FDF0;font-size:13px;font-weight:700;color:#00803A;">● Published</div>
+        <div onclick="setPlaceStatus(this,'draft')" id="ps-dft" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #eee;background:#fafafa;font-size:13px;font-weight:600;color:#888;">Draft</div>
+      </div>
+    </div>
+    <div class="f-section">Address</div>
+    <div class="f-group"><div class="f-label">City</div><input class="f-input" type="text" value="Tbilisi"></div>
+    <div class="f-group"><div class="f-label">Street</div><input class="f-input" type="text" value="Abashidze str. 24"></div>
+    <div class="f-section">Description</div>
+    <div class="f-group"><textarea class="f-textarea" rows="3">Cafe Gusto blends Italian tradition with Georgian flavors. Our terrace offers stunning city views.</textarea></div>
+    <div class="f-section">Working Hours</div>
+    <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+    <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽</div>
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#9c27b0,#3f51b5);">🍷</div>
+      <div class="media-cell media-cell-add" onclick="showToast('Add photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Add</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="showToast('Changes saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="showToast('Place deleted');goBack()">Delete Place</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── MY EVENTS ──────────────────────────────────────── -->
+<div class="screen" id="my-events-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Events</span>
+    <div class="g-hdr-action" onclick="showScreen('add-event-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px;">Upcoming</div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill"><span class="ed">26</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunset Jazz Night</h4><p>Skybar Rooftop · 20:00 · 24 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Live</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:linear-gradient(135deg,#9C27B0,#E91E63);"><span class="ed">29</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Wine Tasting: Alazani</h4><p>Cafe Gusto · 17:00 · 12 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Soon</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:#aaa;"><span class="ed">5</span><span class="em">APR</span></div>
+      <div class="ev-card-info"><h4>DJ Night: House Vibes</h4><p>Skybar · 22:00</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Draft</span>
+    </div>
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin:14px 0 8px;">Past</div>
+    <div class="ev-card-biz">
+      <div class="ev-date-pill" style="background:#ccc;"><span class="ed">20</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunday Brunch Session</h4><p>Cafe Gusto · 38 attended</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Ended</span>
+    </div>
+    <div onclick="showScreen('add-event-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">🎉</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Event</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ADD / EDIT EVENT ───────────────────────────────── -->
+<div class="screen" id="add-event-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="ev-screen-title">Add New Event</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Event Info</div>
+    <div class="f-group"><div class="f-label">Event Name *</div><input class="f-input" type="text" placeholder="e.g. Jazz Night, Wine Tasting…"></div>
+    <div class="f-group"><div class="f-label">Place *</div>
+      <select class="f-select"><option value="">Select from your places…</option><option>Cafe Gusto — Abashidze str. 24</option><option>Skybar Rooftop — Rustaveli Ave 5</option></select>
+    </div>
+    <div class="f-section">Date &amp; Time</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Date *</div><input class="f-input" type="date"></div>
+      <div class="f-group"><div class="f-label">Day</div><input class="f-input" type="text" placeholder="auto" readonly style="color:#aaa;"></div>
+    </div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Start Time *</div><input class="f-input" type="time" value="20:00"></div>
+      <div class="f-group"><div class="f-label">End Time</div><input class="f-input" type="time" value="00:00"></div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Describe the event, performers, highlights…"></textarea></div>
+    <div class="f-group"><div class="f-label">Price (leave blank if free)</div><input class="f-input" type="text" placeholder="e.g. €15 or Free"></div>
+    <div class="f-section">Options</div>
+    <div class="tog-row"><span class="tog-label">Enable Booking</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Publish immediately</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose poster')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Poster</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishEvent()">Publish Event</button>
+    <button class="btn-outline" onclick="showToast('Saved as draft')">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+</div>
+
+<!-- ─── BIZ SETTINGS ───────────────────────────────────── -->
+<div class="screen" id="biz-settings-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Settings</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Account</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Nino Beridze"></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" value="nino@cafegusto.ge"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" value="+995 598 123 456"></div>
+    <div class="f-group"><div class="f-label">New Password</div><input class="f-input" type="password" placeholder="Leave blank to keep current"></div>
+    <div class="f-section">Notifications</div>
+    <div class="tog-row"><span class="tog-label">New bookings</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">New reviews</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Marketing updates</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Danger Zone</div>
+    <button class="btn-grad" onclick="showToast('Settings saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="bizLogout()">Sign Out</button>
+  </div>
+</div>
+
+
+<
+
+<div class="screen" id="my-managers-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Managers</span>
+    <div class="g-hdr-action" onclick="showScreen('add-manager-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div id="managers-list">
+      <div class="mgr-card" onclick="editManager('Goga','Mardashvili','goga@gmail.com','+995 555 001 001')">
+        <div class="mgr-av" style="background:#1877F2;">G</div>
+        <div class="mgr-info"><h4>Goga Mardashvili</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd8d0d8deffd8d2ded6d391dcd0d2">[email&#160;protected]</a> · +995 555 001 001</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('Nina','Kikabidze','nina@gmail.com','+995 555 002 002')">
+        <div class="mgr-av" style="background:#E91E63;">N</div>
+        <div class="mgr-info"><h4>Nina Kikabidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2dcdbdcd3f2d5dfd3dbde9cd1dddf">[email&#160;protected]</a> · +995 555 002 002</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+      <div class="mgr-card" onclick="editManager('David','Lomidze','david@gmail.com','+995 555 003 003')">
+        <div class="mgr-av" style="background:#FF9800;">D</div>
+        <div class="mgr-info"><h4>David Lomidze</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89ede8ffe0edc9eee4e8e0e5a7eae6e4">[email&#160;protected]</a> · +995 555 003 003</p></div>
+        <svg class="mgr-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div onclick="showScreen('add-manager-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">👤</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add new manager</p>
+    </div>
+  </div>
+<
+
+<div class="screen" id="add-manager-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-managers-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="mgr-screen-title">Add Manager</span>
+  </div>
+  <div class="page-body">
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Name</div><input class="f-input" id="mgr-name" type="text" placeholder="Name"></div>
+      <div class="f-group"><div class="f-label">Surname</div><input class="f-input" id="mgr-surname" type="text" placeholder="Surname"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" id="mgr-email" type="email" placeholder="manager@email.com"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" id="mgr-phone" type="tel" placeholder="+995 ..."></div>
+    <div style="height:8px;"></div>
+    <button class="btn-grad" onclick="saveManager()">Save</button>
+    <button class="btn-outline" onclick="showScreen('client-profile-screen')">Cancel</button>
+    <button class="btn-danger-soft" id="mgr-delete-btn" style="display:none;" onclick="deleteManager()">Remove Manager</button>
+  </div>
+<
+
+<div class="screen" id="my-places-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Places</span>
+    <div class="g-hdr-action" onclick="showScreen('add-place-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Cafe Gusto</h4><p>Italian Restaurant · Abashidze str. 24, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill published">● Published</span><span style="font-size:12px;color:#888;">★ 4.6 · 24 reviews</span></div>
+      </div>
+    </div>
+    <div class="pl-card" onclick="showScreen('edit-place-screen')">
+      <div class="pl-card-cover" style="background:linear-gradient(135deg,#1877F2,#0EC6B8);">🍸
+        <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:7px;padding:3px 8px;font-size:10px;color:#fff;font-weight:600;">EDIT</div>
+      </div>
+      <div class="pl-card-body"><h4>Skybar Rooftop</h4><p>Rooftop Bar · Rustaveli Ave 5, Tbilisi</p>
+        <div class="pl-card-footer"><span class="status-pill draft">● Draft</span><span style="font-size:12px;color:#888;">Not published yet</span></div>
+      </div>
+    </div>
+    <div onclick="showScreen('add-place-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:4px;">
+      <div style="font-size:26px;margin-bottom:5px;">📍</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Place</p>
+      <p style="font-size:12px;color:#aaa;margin-top:3px;">Register another venue</p>
+    </div>
+  </div>
+<
+
+<div class="screen" id="add-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="place-screen-title">Add New Place</span>
+    <div class="w-hdr-action" onclick="saveDraft()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info *</div>
+    <div class="f-group"><div class="f-label">Name *</div><input class="f-input" type="text" placeholder="Venue name"></div>
+    <div class="f-group"><div class="f-label">Type *</div>
+      <select class="f-select"><option value="">Select type…</option><option>Restaurant</option><option>Bar</option><option>Club</option><option>Hotel</option><option>Museum</option><option>Theater</option><option>Concert Hall</option><option>Excursion</option></select>
+    </div>
+    <div class="f-group"><div class="f-label">Categories</div>
+      <div class="chip-wrap" id="cat-chips">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Cafe</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Pizzeria</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Steakhouse</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sushi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Fast Food</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Wine Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Hookah Bar</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Sport Bar</div>
+      </div>
+    </div>
+    <div class="f-group"><div class="f-label">Kitchen</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">Italian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Georgian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Japanese</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">European</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Mediterranean</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Asian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">Vegetarian</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">American</div>
+      </div>
+    </div>
+    <div class="f-section">Address *</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">City *</div><input class="f-input" type="text" placeholder="Tbilisi"></div>
+      <div class="f-group"><div class="f-label">Region</div><input class="f-input" type="text" placeholder="Region"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Street *</div><input class="f-input" type="text" placeholder="Street name"></div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Building</div><input class="f-input" type="text" placeholder="No."></div>
+      <div class="f-group"><div class="f-label">Office / Floor</div><input class="f-input" type="text" placeholder=""></div>
+    </div>
+    <div class="f-group">
+      <div class="f-label">Pin on Map</div>
+      <div style="width:100%;height:110px;background:#e8ecf2;border-radius:12px;border:1.5px solid #e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;" onclick="showToast('Map picker opened')">
+        <svg fill="none" stroke="#1877F2" viewBox="0 0 24 24" stroke-width="2" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        <span style="font-size:13px;color:#1877F2;font-weight:600;">Tap to set location</span>
+      </div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Tell guests what makes your venue special…"></textarea></div>
+    <div class="f-group">
+      <div class="f-label">Working Hours</div>
+      <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+      <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    </div>
+    <div class="f-group"><div class="f-label">Features</div>
+      <div class="chip-wrap">
+        <div class="chip-opt" onclick="toggleChipEl(this)">🅿️ Parking</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">📶 WiFi</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🌿 Terrace</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎵 Live music</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">💨 Hookah</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🛋 VIP room</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🐾 Pet-friendly</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">♿ Accessible</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🎂 Birthday events</div>
+        <div class="chip-opt" onclick="toggleChipEl(this)">🚬 Smoking area</div>
+      </div>
+    </div>
+    <div class="f-section">Social Media</div>
+    <div class="f-group"><div class="f-label">Website</div><input class="f-input" type="url" placeholder="https://"></div>
+    <div class="f-group"><div class="f-label">Instagram</div><input class="f-input" type="text" placeholder="@handle"></div>
+    <div class="f-group"><div class="f-label">Facebook</div><input class="f-input" type="text" placeholder="Page name or URL"></div>
+    <div class="f-section">Contacts</div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" placeholder="+995 ..."></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" placeholder="info@venue.com"></div>
+    <div class="f-section">Media <span style="color:#aaa;font-size:10px;">(min 1 photo recommended)</span></div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Photo</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishPlace()">Publish Place</button>
+    <button class="btn-outline" onclick="saveDraft()">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+<
+
+<div class="screen" id="edit-place-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('my-places-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Edit Place</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Basic Info</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Cafe Gusto"></div>
+    <div class="f-group"><div class="f-label">Type</div><select class="f-select"><option selected>Restaurant</option><option>Bar</option><option>Club</option></select></div>
+    <div class="f-group"><div class="f-label">Status</div>
+      <div style="display:flex;gap:8px;">
+        <div onclick="setPlaceStatus(this,'published')" id="ps-pub" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #2ECC40;background:#E8FDF0;font-size:13px;font-weight:700;color:#00803A;">● Published</div>
+        <div onclick="setPlaceStatus(this,'draft')" id="ps-dft" style="flex:1;padding:10px;border-radius:11px;text-align:center;cursor:pointer;border:2px solid #eee;background:#fafafa;font-size:13px;font-weight:600;color:#888;">Draft</div>
+      </div>
+    </div>
+    <div class="f-section">Address</div>
+    <div class="f-group"><div class="f-label">City</div><input class="f-input" type="text" value="Tbilisi"></div>
+    <div class="f-group"><div class="f-label">Street</div><input class="f-input" type="text" value="Abashidze str. 24"></div>
+    <div class="f-section">Description</div>
+    <div class="f-group"><textarea class="f-textarea" rows="3">Cafe Gusto blends Italian tradition with Georgian flavors. Our terrace offers stunning city views.</textarea></div>
+    <div class="f-section">Working Hours</div>
+    <div class="hours-row"><span class="hours-day">Mon–Fri</span><input type="time" class="hours-inp" value="11:00"><input type="time" class="hours-inp" value="23:00"></div>
+    <div class="hours-row"><span class="hours-day">Sat–Sun</span><input type="time" class="hours-inp" value="12:00"><input type="time" class="hours-inp" value="02:00"></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#b8a080,#8a6a40);">🍽</div>
+      <div class="media-cell media-cell-filled" style="background:linear-gradient(135deg,#9c27b0,#3f51b5);">🍷</div>
+      <div class="media-cell media-cell-add" onclick="showToast('Add photo')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Add</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="showToast('Changes saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="showToast('Place deleted');goBack()">Delete Place</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+<
+
+<div class="screen" id="my-events-screen" style="padding-bottom:80px;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">My Events</span>
+    <div class="g-hdr-action" onclick="showScreen('add-event-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+  </div>
+  <div class="page-body">
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px;">Upcoming</div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill"><span class="ed">26</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunset Jazz Night</h4><p>Skybar Rooftop · 20:00 · 24 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Live</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:linear-gradient(135deg,#9C27B0,#E91E63);"><span class="ed">29</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Wine Tasting: Alazani</h4><p>Cafe Gusto · 17:00 · 12 going</p></div>
+      <span class="status-pill published" style="flex-shrink:0;">Soon</span>
+    </div>
+    <div class="ev-card-biz" onclick="showScreen('add-event-screen')">
+      <div class="ev-date-pill" style="background:#aaa;"><span class="ed">5</span><span class="em">APR</span></div>
+      <div class="ev-card-info"><h4>DJ Night: House Vibes</h4><p>Skybar · 22:00</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Draft</span>
+    </div>
+    <div style="font-size:11px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.7px;margin:14px 0 8px;">Past</div>
+    <div class="ev-card-biz">
+      <div class="ev-date-pill" style="background:#ccc;"><span class="ed">20</span><span class="em">MAR</span></div>
+      <div class="ev-card-info"><h4>Sunday Brunch Session</h4><p>Cafe Gusto · 38 attended</p></div>
+      <span class="status-pill draft" style="flex-shrink:0;">Ended</span>
+    </div>
+    <div onclick="showScreen('add-event-screen')" style="border:2px dashed rgba(24,119,242,.3);border-radius:14px;padding:18px;text-align:center;cursor:pointer;margin-top:6px;">
+      <div style="font-size:24px;margin-bottom:5px;">🎉</div>
+      <p style="font-size:14px;font-weight:700;color:#1877F2;">Add New Event</p>
+    </div>
+  </div>
+<
+
+<div class="screen" id="add-event-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title" id="ev-screen-title">Add New Event</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Event Info</div>
+    <div class="f-group"><div class="f-label">Event Name *</div><input class="f-input" type="text" placeholder="e.g. Jazz Night, Wine Tasting…"></div>
+    <div class="f-group"><div class="f-label">Place *</div>
+      <select class="f-select"><option value="">Select from your places…</option><option>Cafe Gusto — Abashidze str. 24</option><option>Skybar Rooftop — Rustaveli Ave 5</option></select>
+    </div>
+    <div class="f-section">Date &amp; Time</div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Date *</div><input class="f-input" type="date"></div>
+      <div class="f-group"><div class="f-label">Day</div><input class="f-input" type="text" placeholder="auto" readonly style="color:#aaa;"></div>
+    </div>
+    <div class="f-row2">
+      <div class="f-group"><div class="f-label">Start Time *</div><input class="f-input" type="time" value="20:00"></div>
+      <div class="f-group"><div class="f-label">End Time</div><input class="f-input" type="time" value="00:00"></div>
+    </div>
+    <div class="f-section">Details</div>
+    <div class="f-group"><div class="f-label">Description</div><textarea class="f-textarea" rows="3" placeholder="Describe the event, performers, highlights…"></textarea></div>
+    <div class="f-group"><div class="f-label">Price (leave blank if free)</div><input class="f-input" type="text" placeholder="e.g. €15 or Free"></div>
+    <div class="f-section">Options</div>
+    <div class="tog-row"><span class="tog-label">Enable Booking</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Publish immediately</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Media</div>
+    <div class="media-upload-grid">
+      <div class="media-cell media-cell-add" onclick="showToast('Choose poster')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Poster</span></div>
+      <div class="media-cell media-cell-add" onclick="showToast('Choose video')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span>Video</span></div>
+    </div>
+    <div style="height:16px;"></div>
+    <button class="btn-grad" onclick="publishEvent()">Publish Event</button>
+    <button class="btn-outline" onclick="showToast('Saved as draft')">Save as Draft</button>
+    <button class="btn-outline" style="color:#888;" onclick="showScreen('client-profile-screen')">Cancel</button>
+  </div>
+<
+
+<div class="screen" id="biz-settings-screen" style="padding-bottom:80px;">
+  <div class="w-hdr">
+    <div class="w-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="w-hdr-title">Settings</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Account</div>
+    <div class="f-group"><div class="f-label">Name</div><input class="f-input" type="text" value="Nino Beridze"></div>
+    <div class="f-group"><div class="f-label">Email</div><input class="f-input" type="email" value="nino@cafegusto.ge"></div>
+    <div class="f-group"><div class="f-label">Phone</div><input class="f-input" type="tel" value="+995 598 123 456"></div>
+    <div class="f-group"><div class="f-label">New Password</div><input class="f-input" type="password" placeholder="Leave blank to keep current"></div>
+    <div class="f-section">Notifications</div>
+    <div class="tog-row"><span class="tog-label">New bookings</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">New reviews</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+    <div class="tog-row"><span class="tog-label">Marketing updates</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+    <div class="f-section">Danger Zone</div>
+    <button class="btn-grad" onclick="showToast('Settings saved ✓');goBack()">Save Changes</button>
+    <button class="btn-danger-soft" onclick="bizLogout()">Sign Out</button>
+  </div>
+<
+
+<div class="screen" id="biz-bookings-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Bookings</span>
+  </div>
+  <div class="page-body">
+    <div class="f-section">Pending Confirmation (4)</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Luka Beridze</div><div style="font-size:12px;color:#888;">2 guests · Table for 2</div></div>
+          <span style="background:#FFF3E0;color:#E65100;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Pending</span>
+        </div>
+        <div style="font-size:12px;color:#555;">📅 Today, 19:00 · Cafe Gusto</div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button onclick="showToast('Booking confirmed ✓')" style="flex:1;background:#1877F2;color:#fff;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Confirm</button>
+          <button onclick="showToast('Booking declined')" style="flex:1;background:#FFE8E8;color:#E53935;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Decline</button>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Ana Kvitashvili</div><div style="font-size:12px;color:#888;">4 guests · Table for 4</div></div>
+          <span style="background:#FFF3E0;color:#E65100;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Pending</span>
+        </div>
+        <div style="font-size:12px;color:#555;">📅 Tomorrow, 20:30 · Cafe Gusto</div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button onclick="showToast('Booking confirmed ✓')" style="flex:1;background:#1877F2;color:#fff;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Confirm</button>
+          <button onclick="showToast('Booking declined')" style="flex:1;background:#FFE8E8;color:#E53935;border:none;border-radius:10px;padding:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;">Decline</button>
+        </div>
+      </div>
+    </div>
+    <div class="f-section" style="margin-top:16px;">Confirmed (2)</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div><div style="font-size:14px;font-weight:700;color:#111;">Giorgi Mamulashvili</div><div style="font-size:12px;color:#888;">3 guests · Table for 4</div></div>
+          <span style="background:#E8FDF0;color:#00803A;border-radius:8px;padding:3px 9px;font-size:11px;font-weight:700;">Confirmed</span>
+        </div>
+        <div style="font-size:12px;color:#555;margin-top:6px;">📅 Tonight, 21:00 · Skybar Rooftop</div>
+      </div>
+    </div>
+  </div>
+<
+
+<div class="screen" id="biz-reviews-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Reviews</span>
+  </div>
+  <div class="page-body">
+    <div style="background:#fff;border-radius:14px;padding:14px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="text-align:center;"><div style="font-size:36px;font-weight:800;color:#111;">4.7</div><div style="color:#F5C518;font-size:18px;">★★★★★</div><div style="font-size:11px;color:#888;margin-top:2px;">24 reviews</div></div>
+      <div style="flex:1;">
+        <div style="font-size:12px;color:#555;margin-bottom:4px;">Based on all venues</div>
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">5</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:70%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">4</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:20%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">3</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:7%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">2</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:2%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:11px;color:#888;width:8px;">1</span><div style="flex:1;height:6px;background:#f0f0f0;border-radius:3px;"><div style="width:1%;height:100%;background:#F5C518;border-radius:3px;"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="f-section">Recent Reviews</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Maria Popova</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★★</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Amazing atmosphere and great cocktails! Will definitely come back."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">2 days ago · Cafe Gusto</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Alex Kim</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★☆</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Great view from the rooftop. Service was a bit slow but the drinks made up for it."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">5 days ago · Skybar Rooftop</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <div style="font-size:13px;font-weight:700;color:#111;">Tina Maisuradze</div>
+          <div style="color:#F5C518;font-size:13px;">★★★★★</div>
+        </div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">"Best wine selection in Tbilisi! The jazz evening was perfect."</div>
+        <div style="font-size:11px;color:#aaa;margin-top:6px;">1 week ago · Cafe Gusto</div>
+      </div>
+    </div>
+  </div>
+<
+
+<div class="screen" id="biz-messages-screen" style="background:#f5f5f5;">
+  <div class="g-hdr">
+    <div class="g-hdr-back" onclick="showScreen('client-profile-screen')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg></div>
+    <span class="g-hdr-title">Messages</span>
+  </div>
+  <div class="page-body">
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1877F2,#0EC6B8);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">L</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Luka Beridze</span><span style="font-size:11px;color:#aaa;">2m</span></div>
+          <div style="font-size:12px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Can I book a table for 4 for tonight?</div>
+        </div>
+        <div style="width:18px;height:18px;background:#E53935;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">2</div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#E91E63,#9C27B0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">A</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Ana Kvitashvili</span><span style="font-size:11px;color:#aaa;">15m</span></div>
+          <div style="font-size:12px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Is the jazz event still on for Friday?</div>
+        </div>
+        <div style="width:18px;height:18px;background:#E53935;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;">1</div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#FF9800,#F44336);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">G</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Giorgi Mamulashvili</span><span style="font-size:11px;color:#aaa;">1h</span></div>
+          <div style="font-size:12px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Thanks for the confirmation!</div>
+        </div>
+      </div>
+      <div onclick="showToast('Chat opened')" style="background:#fff;border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;box-shadow:0 1px 5px rgba(0,0,0,.05);">
+        <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#4CAF50,#009688);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">T</div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:13px;font-weight:700;color:#111;">Tina Maisuradze</span><span style="font-size:11px;color:#aaa;">3h</span></div>
+          <div style="font-size:12px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Loved the wine tasting event!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<
